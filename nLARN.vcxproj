@@ -18,13 +18,13 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <UseDebugLibraries>true</UseDebugLibraries>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -35,7 +35,14 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>inc;inc/external;PDCurses;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DEBUG;G_DISABLE_DEPRECATED;SDLPDCURSES;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <TreatWarningAsError>true</TreatWarningAsError>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -43,11 +50,92 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>inc;inc/external;PDCurses;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>G_DISABLE_ASSERT;G_DISABLE_DEPRECATED;SDLPDCURSES;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <TreatWarningAsError>true</TreatWarningAsError>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\amulets.c" />
+    <ClCompile Include="src\armour.c" />
+    <ClCompile Include="src\buildings.c" />
+    <ClCompile Include="src\colours.c" />
+    <ClCompile Include="src\combat.c" />
+    <ClCompile Include="src\config.c" />
+    <ClCompile Include="src\container.c" />
+    <ClCompile Include="src\display.c" />
+    <ClCompile Include="src\effects.c" />
+    <ClCompile Include="src\fov.c" />
+    <ClCompile Include="src\game.c" />
+    <ClCompile Include="src\gems.c" />
+    <ClCompile Include="src\inventory.c" />
+    <ClCompile Include="src\items.c" />
+    <ClCompile Include="src\map.c" />
+    <ClCompile Include="src\monsters.c" />
+    <ClCompile Include="src\nlarn.c" />
+    <ClCompile Include="src\pathfinding.c" />
+    <ClCompile Include="src\player.c" />
+    <ClCompile Include="src\position.c" />
+    <ClCompile Include="src\potions.c" />
+    <ClCompile Include="src\random.c" />
+    <ClCompile Include="src\rings.c" />
+    <ClCompile Include="src\scoreboard.c" />
+    <ClCompile Include="src\scrolls.c" />
+    <ClCompile Include="src\sobjects.c" />
+    <ClCompile Include="src\spells.c" />
+    <ClCompile Include="src\spheres.c" />
+    <ClCompile Include="src\traps.c" />
+    <ClCompile Include="src\utils.c" />
+    <ClCompile Include="src\weapons.c" />
+    <ClCompile Include="src\external\cJSON.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="inc\amulets.h" />
+    <ClInclude Include="inc\armour.h" />
+    <ClInclude Include="inc\buildings.h" />
+    <ClInclude Include="inc\colours.h" />
+    <ClInclude Include="inc\combat.h" />
+    <ClInclude Include="inc\config.h" />
+    <ClInclude Include="inc\container.h" />
+    <ClInclude Include="inc\display.h" />
+    <ClInclude Include="inc\effects.h" />
+    <ClInclude Include="inc\extdefs.h" />
+    <ClInclude Include="inc\fov.h" />
+    <ClInclude Include="inc\game.h" />
+    <ClInclude Include="inc\gems.h" />
+    <ClInclude Include="inc\inventory.h" />
+    <ClInclude Include="inc\items.h" />
+    <ClInclude Include="inc\map.h" />
+    <ClInclude Include="inc\monsters.h" />
+    <ClInclude Include="inc\nlarn.h" />
+    <ClInclude Include="inc\pathfinding.h" />
+    <ClInclude Include="inc\player.h" />
+    <ClInclude Include="inc\position.h" />
+    <ClInclude Include="inc\potions.h" />
+    <ClInclude Include="inc\random.h" />
+    <ClInclude Include="inc\rings.h" />
+    <ClInclude Include="inc\scoreboard.h" />
+    <ClInclude Include="inc\scrolls.h" />
+    <ClInclude Include="inc\sobjects.h" />
+    <ClInclude Include="inc\spells.h" />
+    <ClInclude Include="inc\spheres.h" />
+    <ClInclude Include="inc\traps.h" />
+    <ClInclude Include="inc\utils.h" />
+    <ClInclude Include="inc\weapons.h" />
+    <ClInclude Include="inc\external\cJSON.h" />
+    <ClInclude Include="inc\external\enumFactory.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resources\nlarn.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="nLARN.vcxproj.new" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 </Project>
