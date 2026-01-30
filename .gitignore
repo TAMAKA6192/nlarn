@@ -39,3 +39,5 @@ nlarn.depend
 
 # macOS
 .DS_Store
+.vs/
+out/
