@@ -29,6 +29,7 @@ nlarn.depend
 
 # VS Code
 .vscode/
+.local/
 
 # CLion
 .idea/
