@@ -1,0 +1,9 @@
+﻿{
+  "name": "nlarn",
+  "version": "0.7.8",
+  "dependencies": [
+    "glib",
+    "pdcurses",
+    "zlib"
+  ]
+}

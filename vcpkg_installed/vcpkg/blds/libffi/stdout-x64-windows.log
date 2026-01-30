@@ -1,0 +1,55 @@
+Downloading https://github.com/libffi/libffi/releases/download/v3.5.2/libffi-3.5.2.tar.gz -> libffi-3.5.2.tar.gz
+Successfully downloaded libffi-3.5.2.tar.gz
+-- Extracting source C:/Users/Owner/AppData/Local/vcpkg/downloads/libffi-3.5.2.tar.gz
+-- Applying patch dll-bindir.diff
+-- Using source at D:/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libffi/src/libffi-3-c1e5d7d6da.clean
+-- Found external ninja('1.12.1').
+-- Getting CMake variables for x64-windows
+-- Loading CMake variables from D:/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libffi/cmake-get-vars_ASM_C_CXX-x64-windows.cmake.log
+-- Using cached msys2-autoconf-wrapper-20240607-1-any.pkg.tar.zst
+-- Using cached msys2-automake-wrapper-20240607-1-any.pkg.tar.zst
+Downloading msys2-autoconf-archive-2023.02.20-1-any.pkg.tar.zst, trying https://mirror.msys2.org/msys/x86_64/autoconf-archive-2023.02.20-1-any.pkg.tar.zst
+Successfully downloaded msys2-autoconf-archive-2023.02.20-1-any.pkg.tar.zst
+-- Using cached msys2-binutils-2.44-1-x86_64.pkg.tar.zst
+-- Using cached msys2-libtool-2.5.4-1-x86_64.pkg.tar.zst
+-- Using cached msys2-make-4.4.1-2-x86_64.pkg.tar.zst
+-- Using cached msys2-which-2.23-4-x86_64.pkg.tar.zst
+-- Using cached msys2-bash-5.2.037-2-x86_64.pkg.tar.zst
+-- Using cached msys2-coreutils-8.32-5-x86_64.pkg.tar.zst
+-- Using cached msys2-file-5.46-2-x86_64.pkg.tar.zst
+-- Using cached msys2-gawk-5.3.2-1-x86_64.pkg.tar.zst
+-- Using cached msys2-grep-1~3.0-7-x86_64.pkg.tar.zst
+-- Using cached msys2-gzip-1.14-1-x86_64.pkg.tar.zst
+-- Using cached msys2-diffutils-3.12-1-x86_64.pkg.tar.zst
+-- Using cached msys2-pkgconf-2.4.3-1-x86_64.pkg.tar.zst
+-- Using cached msys2-sed-4.9-1-x86_64.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.2-2-x86_64.pkg.tar.zst
+-- Using cached msys2-autoconf2.72-2.72-3-any.pkg.tar.zst
+-- Using cached msys2-automake1.16-1.16.5-1-any.pkg.tar.zst
+-- Using cached msys2-automake1.17-1.17-1-any.pkg.tar.zst
+-- Using cached msys2-libiconv-1.18-1-x86_64.pkg.tar.zst
+-- Using cached msys2-libintl-0.22.5-1-x86_64.pkg.tar.zst
+-- Using cached msys2-zlib-1.3.1-1-x86_64.pkg.tar.zst
+-- Using cached msys2-findutils-4.10.0-2-x86_64.pkg.tar.zst
+-- Using cached msys2-tar-1.35-2-x86_64.pkg.tar.zst
+-- Using cached msys2-gmp-6.3.0-1-x86_64.pkg.tar.zst
+-- Using cached msys2-gcc-libs-13.3.0-1-x86_64.pkg.tar.zst
+-- Using cached msys2-libbz2-1.0.8-4-x86_64.pkg.tar.zst
+-- Using cached msys2-liblzma-5.8.1-1-x86_64.pkg.tar.zst
+-- Using cached msys2-libzstd-1.5.7-1-x86_64.pkg.tar.zst
+-- Using cached msys2-libreadline-8.2.013-1-x86_64.pkg.tar.zst
+-- Using cached msys2-mpfr-4.2.2-1-x86_64.pkg.tar.zst
+-- Using cached msys2-libpcre-8.45-5-x86_64.pkg.tar.zst
+-- Using cached msys2-m4-1.4.19-2-x86_64.pkg.tar.zst
+-- Using cached msys2-perl-5.38.4-2-x86_64.pkg.tar.zst
+-- Using cached msys2-ncurses-6.5.20240831-2-x86_64.pkg.tar.zst
+-- Using cached msys2-libxcrypt-4.4.38-1-x86_64.pkg.tar.zst
+-- Applying patch C:/Program Files/Microsoft Visual Studio/18/Community/VC/vcpkg/scripts/cmake/compile_wrapper_consider_clang-cl.patch
+-- Using msys root at C:/Users/Owner/AppData/Local/vcpkg/downloads/tools/msys2/8392cd453c24d30d
+Downloading https://github.com/llvm/llvm-project/releases/download/llvmorg-15.0.6/LLVM-15.0.6-win64.exe -> LLVM-15.0.6-win64.exe
+Successfully downloaded LLVM-15.0.6-win64.exe
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.4.3-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.2-2-x86_64.pkg.tar.zst
+-- Using msys root at C:/Users/Owner/AppData/Local/vcpkg/downloads/tools/msys2/9272adbcaf19caef
+-- Configuring x64-windows-dbg
+-- Configuring x64-windows-rel

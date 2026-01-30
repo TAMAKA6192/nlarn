@@ -1,0 +1,19 @@
+/* confdefs.h */
+#define PACKAGE_NAME "libffi"
+#define PACKAGE_TARNAME "libffi"
+#define PACKAGE_VERSION "3.5.2"
+#define PACKAGE_STRING "libffi 3.5.2"
+#define PACKAGE_BUGREPORT "http://github.com/libffi/libffi/issues"
+#define PACKAGE_URL ""
+#define PACKAGE "libffi"
+#define VERSION "3.5.2"
+#define HAVE_STDIO_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_SYS_TYPES_H 1
+#define STDC_HEADERS 1
+#define LT_OBJDIR ".libs/"
+#define SIZEOF_SIZE_T 8

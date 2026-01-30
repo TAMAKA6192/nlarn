@@ -1,0 +1,14 @@
+[33;1mVERBOSE: Resolving base path D:/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/tools/libiconv/debug/bin/iconv-2.dll...[0m
+[33;1mVERBOSE: Resolving D:/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/tools/libiconv/debug/bin/iconv-2.dll...[0m
+[33;1mVERBOSE:   KERNEL32.dll: D:\ReposGitHub\nLARN\vcpkg_installed\x64-windows\debug\bin\KERNEL32.dll not found[0m
+[33;1mVERBOSE:   VCRUNTIME140D.dll: D:\ReposGitHub\nLARN\vcpkg_installed\x64-windows\debug\bin\VCRUNTIME140D.dll not found[0m
+[33;1mVERBOSE:   ucrtbased.dll: D:\ReposGitHub\nLARN\vcpkg_installed\x64-windows\debug\bin\ucrtbased.dll not found[0m
+[33;1mVERBOSE: Done Resolving D:/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/tools/libiconv/debug/bin/iconv-2.dll.[0m
+[33;1mVERBOSE: 
+Name                           Value
+----                           -----
+ucrtbased.dll                  True
+VCRUNTIME140D.dll              True
+KERNEL32.dll                   True
+
+[0m

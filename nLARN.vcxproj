@@ -136,6 +136,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="nLARN.vcxproj.new" />
+    <None Include="vcpkg-configuration.json" />
+    <None Include="vcpkg.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 </Project>

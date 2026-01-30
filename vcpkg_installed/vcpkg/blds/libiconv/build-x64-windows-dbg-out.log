@@ -1,0 +1,1907 @@
+Makefile:41: update target 'lib/localcharset.h' due to: target does not exist
+builddir="`pwd`"; cd libcharset && /usr/bin/make all && /usr/bin/make install-lib libdir="$builddir/lib" includedir="$builddir/lib"
+make[1]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/libcharset'
+Makefile:34: update target 'all' due to: target does not exist
+cd lib && /usr/bin/make all
+make[2]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/libcharset/lib'
+Makefile:58: update target 'localcharset.lo' due to: target does not exist
+/bin/sh ../libtool --mode=compile compile cl.exe -I. -I../.././../src/v1.18-8006e03beb.clean/libcharset/lib -I.. -I../.././../src/v1.18-8006e03beb.clean/libcharset/lib/.. -I../include -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1  -DWIN32 -D_WINDOWS -DBUILDING_LIBCHARSET -DHAVE_CONFIG_H -c ../.././../src/v1.18-8006e03beb.clean/libcharset/lib/localcharset.c
+Makefile:61: update target 'relocatable-stub.lo' due to: target does not exist
+/bin/sh ../libtool --mode=compile compile cl.exe -I. -I../.././../src/v1.18-8006e03beb.clean/libcharset/lib -I.. -I../.././../src/v1.18-8006e03beb.clean/libcharset/lib/.. -I../include -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1  -DWIN32 -D_WINDOWS -DBUILDING_LIBCHARSET -DHAVE_CONFIG_H -c ../.././../src/v1.18-8006e03beb.clean/libcharset/lib/relocatable-stub.c
+libtool: compile:  compile cl.exe -I. -I../.././../src/v1.18-8006e03beb.clean/libcharset/lib -I.. -I../.././../src/v1.18-8006e03beb.clean/libcharset/lib/.. -nologo -utf-8 -MP -MDd -Z7 -Ob0 -Od -RTC1 -I../include -DWIN32 -D_WINDOWS -DBUILDING_LIBCHARSET -DHAVE_CONFIG_H -c ../.././../src/v1.18-8006e03beb.clean/libcharset/lib/relocatable-stub.c  -DDLL_EXPORT -DPIC -o .libs/relocatable-stub.obj
+relocatable-stub.c
+libtool: compile:  compile cl.exe -I. -I../.././../src/v1.18-8006e03beb.clean/libcharset/lib -I.. -I../.././../src/v1.18-8006e03beb.clean/libcharset/lib/.. -nologo -utf-8 -MP -MDd -Z7 -Ob0 -Od -RTC1 -I../include -DWIN32 -D_WINDOWS -DBUILDING_LIBCHARSET -DHAVE_CONFIG_H -c ../.././../src/v1.18-8006e03beb.clean/libcharset/lib/localcharset.c  -DDLL_EXPORT -DPIC -o .libs/localcharset.obj
+localcharset.c
+Makefile:55: update target 'libcharset.la' due to: target does not exist
+/bin/sh ../libtool --mode=link compile cl.exe -Xlinker -Xlinker -Xlinker -LIBPATH:D:/ReposGitHub/nLARN/vcpkg_installed/x64-windows/debug/lib -Xlinker -Xlinker -Xlinker -machine:x64 -Xlinker -Xlinker -Xlinker -nologo -Xlinker -Xlinker -Xlinker -debug -Xlinker -Xlinker -Xlinker -INCREMENTAL -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1  -o libcharset.la -rpath /D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/debug/lib -version-info 1:0:0 -no-undefined localcharset.lo relocatable-stub.lo
+libtool: link: dumpbin.exe -symbols -headers  .libs/localcharset.obj .libs/relocatable-stub.obj   | gawk '     {last_section=section; section=$ 3};     /^COFF SYMBOL TABLE/{for(i in hide) delete hide[i]};     /Section length .*#relocs.*(pick any)/{hide[last_section]=1};     /^ *Symbol name *: /{split($ 0,sn,":"); si=substr(sn[2],2)};     /^ *Type *: code/{print "T",si,substr(si,length(prfx))};     /^ *Type *: data/{print "I",si,substr(si,length(prfx))};     $ 0!~/External *\|/{next};     / 0+ UNDEF /{next}; / UNDEF \([^|]\)*()/{next};     {if(hide[section]) next};     {f="D"}; $ 0~/\(\).*\|/{f="T"};     {split($ 0,a,/\||\r/); split(a[2],s)};     s[1]~/^[@?]/{print f,s[1],s[1]; next};     s[1]~prfx {split(s[1],t,"@"); print f,t[1],substr(t[1],length(prfx))}     ' prfx=^ | /usr/bin/sed '/ __gnu_lto/d' | /usr/bin/sed -e '/^[BCDGRS][ ]/s/.*[ ]\([^ ]*\)/\1,DATA/' | /usr/bin/sed -e '/^[AITW][ ]/s/.*[ ]//' | sort | uniq > .libs/charset.exp
+libtool: link: if test DEF = "`/usr/bin/sed -n -e 's/^[	 ]*//' -e '/^\(;.*\)*$/d' -e 's/^\(EXPORTS\|LIBRARY\)\([	 ].*\)*$/DEF/p' -e q .libs/charset.exp`" ; then cp ".libs/charset.exp" ".libs/charset-1.dll.def"; echo ".libs\\charset-1.dll.def" > ".libs/charset-1.dll.exp"; else /usr/bin/sed -e 's/^/-link -EXPORT:/' < .libs/charset.exp > .libs/charset-1.dll.exp; fi
+libtool: link:  compile cl.exe -Fe.libs\\charset-1.dll  .libs/localcharset.obj .libs/relocatable-stub.obj   -Xlinker -LIBPATH:D:/ReposGitHub/nLARN/vcpkg_installed/x64-windows/debug/lib -Xlinker -machine:x64 -Xlinker -nologo -Xlinker -debug -Xlinker -INCREMENTAL -nologo -utf-8 -MP -MDd -Z7 -Ob0 -Od -RTC1    "@.libs\\charset-1.dll.exp" -Wl,-DLL,-IMPLIB:".libs\\charset.lib"
+   Creating library .libs\charset.lib and object .libs\charset.exp
+libtool: link:  linknames=
+libtool: link: ( cd ".libs" && rm -f "libcharset.la" && cp -pR "../libcharset.la" "libcharset.la" )
+make[2]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/libcharset/lib'
+make[1]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/libcharset'
+make[1]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/libcharset'
+Makefile:34: update target 'all' due to: target does not exist
+cd lib && /usr/bin/make all
+make[2]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/libcharset/lib'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/libcharset/lib'
+Makefile:39: update target 'install-lib' due to: target does not exist
+cd lib && /usr/bin/make install-lib libdir='/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/lib' includedir='/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/lib'
+make[2]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/libcharset/lib'
+Makefile:66: update target 'install-lib' due to: target does not exist
+/bin/sh ../.././../src/v1.18-8006e03beb.clean/libcharset/build-aux/mkinstalldirs /d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/lib
+/bin/sh ../libtool --mode=install /usr/bin/install -c libcharset.la /d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/lib/libcharset.la
+libtool: install: /usr/bin/install -c .libs/charset.lib /d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/lib/charset.lib
+libtool: install: base_file=`basename libcharset.la`
+libtool: install:  dlpath=`/bin/sh 2>&1 -c '. .libs/'libcharset.la'i; echo charset-1.dll'`
+libtool: install:  dldir=/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/lib/`dirname ../bin/charset-1.dll`
+libtool: install:  test -d /d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/lib/../bin || mkdir -p /d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/lib/../bin
+libtool: install:  /usr/bin/install -c .libs/charset-1.dll /d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/lib/../bin/charset-1.dll
+libtool: install: /usr/bin/install -c .libs/libcharset.lai /d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/lib/libcharset.la
+make[2]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/libcharset/lib'
+/bin/sh .././../src/v1.18-8006e03beb.clean/libcharset/build-aux/mkinstalldirs /d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/lib
+/usr/bin/install -c -m 644 include/libcharset.h.inst /d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/lib/libcharset.h
+/usr/bin/install -c -m 644 include/localcharset.h /d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/lib/localcharset.h
+make[1]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/libcharset'
+Makefile:33: update target 'all' due to: target does not exist
+cd lib && /usr/bin/make all
+make[1]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/lib'
+Makefile:80: update target 'iconv.lo' due to: target does not exist
+/bin/sh ../libtool --mode=compile compile cl.exe -I. -I.././../src/v1.18-8006e03beb.clean/lib -I../include -I.././../src/v1.18-8006e03beb.clean/lib/../include -I.. -I.././../src/v1.18-8006e03beb.clean/lib/.. -DWIN32 -D_WINDOWS -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1  -DBUILDING_LIBICONV -DBUILDING_LIBCHARSET -DHAVE_CONFIG_H -c .././../src/v1.18-8006e03beb.clean/lib/iconv.c
+Makefile:83: update target 'localcharset.lo' due to: target does not exist
+/bin/sh ../libtool --mode=compile compile cl.exe -I. -I.././../src/v1.18-8006e03beb.clean/lib -I../include -I.././../src/v1.18-8006e03beb.clean/lib/../include -I.. -I.././../src/v1.18-8006e03beb.clean/lib/.. -DWIN32 -D_WINDOWS -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1  -DBUILDING_LIBICONV -DBUILDING_LIBCHARSET -DHAVE_CONFIG_H -c .././../src/v1.18-8006e03beb.clean/lib/../libcharset/lib/localcharset.c
+Makefile:86: update target 'compat.lo' due to: target does not exist
+/bin/sh ../libtool --mode=compile compile cl.exe -I. -I.././../src/v1.18-8006e03beb.clean/lib -I../include -I.././../src/v1.18-8006e03beb.clean/lib/../include -I.. -I.././../src/v1.18-8006e03beb.clean/lib/.. -DWIN32 -D_WINDOWS -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1  -DBUILDING_LIBICONV -DBUILDING_LIBCHARSET -DHAVE_CONFIG_H -c .././../src/v1.18-8006e03beb.clean/lib/compat.c
+Makefile:89: update target 'iconv-exports.lo' due to: target does not exist
+/bin/sh ../libtool --mode=compile compile cl.exe -I. -I.././../src/v1.18-8006e03beb.clean/lib -I../include -I.././../src/v1.18-8006e03beb.clean/lib/../include -I.. -I.././../src/v1.18-8006e03beb.clean/lib/.. -DWIN32 -D_WINDOWS -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1  -DBUILDING_LIBICONV -DBUILDING_LIBCHARSET -DHAVE_CONFIG_H -c .././../src/v1.18-8006e03beb.clean/lib/../woe32dll/iconv-exports.c
+Makefile:92: update target 'libiconv.res.lo' due to: target does not exist
+/bin/sh ../libtool --mode=compile --tag=RC windres-rc rc.exe `/bin/sh .././../src/v1.18-8006e03beb.clean/lib/../windows/windres-options --escape 1.18` -i .././../src/v1.18-8006e03beb.clean/lib/../windows/libiconv.rc -o libiconv.res.lo --output-format=coff
+libtool: compile:  compile cl.exe -I. -I.././../src/v1.18-8006e03beb.clean/lib -I../include -I.././../src/v1.18-8006e03beb.clean/lib/../include -I.. -I.././../src/v1.18-8006e03beb.clean/lib/.. -DWIN32 -nologo -utf-8 -MP -MDd -Z7 -Ob0 -Od -RTC1 -D_WINDOWS -DBUILDING_LIBICONV -DBUILDING_LIBCHARSET -DHAVE_CONFIG_H -c .././../src/v1.18-8006e03beb.clean/lib/../libcharset/lib/localcharset.c  -DDLL_EXPORT -DPIC -o .libs/localcharset.obj
+libtool: compile:  compile cl.exe -I. -I.././../src/v1.18-8006e03beb.clean/lib -I../include -I.././../src/v1.18-8006e03beb.clean/lib/../include -I.. -I.././../src/v1.18-8006e03beb.clean/lib/.. -DWIN32 -nologo -utf-8 -MP -MDd -Z7 -Ob0 -Od -RTC1 -D_WINDOWS -DBUILDING_LIBICONV -DBUILDING_LIBCHARSET -DHAVE_CONFIG_H -c .././../src/v1.18-8006e03beb.clean/lib/iconv.c  -DDLL_EXPORT -DPIC -o .libs/iconv.obj
+libtool: compile:  compile cl.exe -I. -I.././../src/v1.18-8006e03beb.clean/lib -I../include -I.././../src/v1.18-8006e03beb.clean/lib/../include -I.. -I.././../src/v1.18-8006e03beb.clean/lib/.. -DWIN32 -nologo -utf-8 -MP -MDd -Z7 -Ob0 -Od -RTC1 -D_WINDOWS -DBUILDING_LIBICONV -DBUILDING_LIBCHARSET -DHAVE_CONFIG_H -c .././../src/v1.18-8006e03beb.clean/lib/../woe32dll/iconv-exports.c  -DDLL_EXPORT -DPIC -o .libs/iconv-exports.obj
+libtool: compile:  compile cl.exe -I. -I.././../src/v1.18-8006e03beb.clean/lib -I../include -I.././../src/v1.18-8006e03beb.clean/lib/../include -I.. -I.././../src/v1.18-8006e03beb.clean/lib/.. -DWIN32 -nologo -utf-8 -MP -MDd -Z7 -Ob0 -Od -RTC1 -D_WINDOWS -DBUILDING_LIBICONV -DBUILDING_LIBCHARSET -DHAVE_CONFIG_H -c .././../src/v1.18-8006e03beb.clean/lib/compat.c  -DDLL_EXPORT -DPIC -o .libs/compat.obj
+localcharset.c
+iconv-exports.c
+compat.c
+iconv.c
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\x64-windows-dbg\include\iconv.h(49): warning C4141: 'dllimport': used more than once
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\x64-windows-dbg\include\iconv.h(49): warning C4141: 'dllimport': used more than once
+libtool: compile:  windres-rc rc.exe -DPACKAGE_VERSION_STRING=\\\"1.18\\\" -DPACKAGE_VERSION_MAJOR=1 -DPACKAGE_VERSION_MINOR=18 -DPACKAGE_VERSION_SUBMINOR=0 -i .././../src/v1.18-8006e03beb.clean/lib/../windows/libiconv.rc --output-format=coff  -o .libs/libiconv.res.obj
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_aix.h(1): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_aix.h(2): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_aix.h(3): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_aix.h(4): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_aix.h(5): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_aix.h(6): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_aix.h(7): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_aix.h(8): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_aix.h(9): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_aix.h(10): warning C4311: 'type cast': pointer truncation from 'char (*)[10]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_aix.h(11): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_aix.h(12): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_aix.h(13): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_aix.h(14): warning C4311: 'type cast': pointer truncation from 'char (*)[10]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_aix.h(15): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_aix.h(16): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_aix.h(17): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_aix.h(18): warning C4311: 'type cast': pointer truncation from 'char (*)[10]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_osf1.h(1): warning C4311: 'type cast': pointer truncation from 'char (*)[10]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_osf1.h(2): warning C4311: 'type cast': pointer truncation from 'char (*)[10]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(1): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(2): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(3): warning C4311: 'type cast': pointer truncation from 'char (*)[4]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(4): warning C4311: 'type cast': pointer truncation from 'char (*)[17]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(5): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(6): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(7): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(8): warning C4311: 'type cast': pointer truncation from 'char (*)[14]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(9): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(10): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(11): warning C4311: 'type cast': pointer truncation from 'char (*)[4]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(12): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(13): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(14): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(15): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(16): warning C4311: 'type cast': pointer truncation from 'char (*)[4]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(17): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(18): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(19): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(20): warning C4311: 'type cast': pointer truncation from 'char (*)[4]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(21): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(22): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(23): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(24): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(25): warning C4311: 'type cast': pointer truncation from 'char (*)[4]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(26): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(27): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(28): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(29): warning C4311: 'type cast': pointer truncation from 'char (*)[4]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(30): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(31): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(32): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(33): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(34): warning C4311: 'type cast': pointer truncation from 'char (*)[4]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(35): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(36): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(37): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(38): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(39): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(40): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(41): warning C4311: 'type cast': pointer truncation from 'char (*)[4]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(42): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(43): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(44): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(45): warning C4311: 'type cast': pointer truncation from 'char (*)[4]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(46): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(47): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_dos.h(48): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(1): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(2): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(3): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(4): warning C4311: 'type cast': pointer truncation from 'char (*)[13]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(5): warning C4311: 'type cast': pointer truncation from 'char (*)[13]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(6): warning C4311: 'type cast': pointer truncation from 'char (*)[13]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(7): warning C4311: 'type cast': pointer truncation from 'char (*)[13]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(8): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(9): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(10): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(11): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(12): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(13): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(14): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(15): warning C4311: 'type cast': pointer truncation from 'char (*)[13]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(16): warning C4311: 'type cast': pointer truncation from 'char (*)[13]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(17): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(18): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(19): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(20): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(21): warning C4311: 'type cast': pointer truncation from 'char (*)[13]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(22): warning C4311: 'type cast': pointer truncation from 'char (*)[13]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(23): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(24): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(25): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(26): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(27): warning C4311: 'type cast': pointer truncation from 'char (*)[13]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(28): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(29): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(30): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(31): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(32): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(33): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(34): warning C4311: 'type cast': pointer truncation from 'char (*)[13]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(35): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(36): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(37): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(38): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(39): warning C4311: 'type cast': pointer truncation from 'char (*)[13]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(40): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(41): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(42): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(43): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(44): warning C4311: 'type cast': pointer truncation from 'char (*)[13]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(45): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(46): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(47): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(48): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(49): warning C4311: 'type cast': pointer truncation from 'char (*)[13]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(50): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(51): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(52): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(53): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(54): warning C4311: 'type cast': pointer truncation from 'char (*)[13]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(55): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(56): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(57): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(58): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(59): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(60): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(61): warning C4311: 'type cast': pointer truncation from 'char (*)[13]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(62): warning C4311: 'type cast': pointer truncation from 'char (*)[13]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(63): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(64): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(65): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(66): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(67): warning C4311: 'type cast': pointer truncation from 'char (*)[10]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(68): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(69): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(70): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(71): warning C4311: 'type cast': pointer truncation from 'char (*)[16]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(72): warning C4311: 'type cast': pointer truncation from 'char (*)[13]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(73): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(74): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(75): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(76): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(77): warning C4311: 'type cast': pointer truncation from 'char (*)[13]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(78): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(79): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(80): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(81): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(82): warning C4311: 'type cast': pointer truncation from 'char (*)[13]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(83): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(84): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(85): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(86): warning C4311: 'type cast': pointer truncation from 'char (*)[16]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(87): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(88): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(89): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(90): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(91): warning C4311: 'type cast': pointer truncation from 'char (*)[13]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(92): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(93): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(94): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(95): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(96): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(97): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(98): warning C4311: 'type cast': pointer truncation from 'char (*)[19]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(99): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(100): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(101): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(102): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(103): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(104): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(105): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(106): warning C4311: 'type cast': pointer truncation from 'char (*)[10]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(107): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(108): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(109): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(110): warning C4311: 'type cast': pointer truncation from 'char (*)[10]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(111): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(112): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(113): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(114): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(115): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(116): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(117): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(118): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(119): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(120): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(121): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(122): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(123): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(124): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(125): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(126): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(127): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(128): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(129): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(130): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(131): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(132): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(133): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(134): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(135): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(136): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(137): warning C4311: 'type cast': pointer truncation from 'char (*)[18]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(138): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(139): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(140): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(141): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(142): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(143): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(144): warning C4311: 'type cast': pointer truncation from 'char (*)[19]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(145): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(146): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(147): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(148): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(149): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(150): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(151): warning C4311: 'type cast': pointer truncation from 'char (*)[19]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(152): warning C4311: 'type cast': pointer truncation from 'char (*)[19]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(153): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(154): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(155): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(156): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(157): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(158): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(159): warning C4311: 'type cast': pointer truncation from 'char (*)[19]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(160): warning C4311: 'type cast': pointer truncation from 'char (*)[19]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(161): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(162): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(163): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(164): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(165): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(166): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(167): warning C4311: 'type cast': pointer truncation from 'char (*)[19]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(168): warning C4311: 'type cast': pointer truncation from 'char (*)[18]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(169): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(170): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(171): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(172): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(173): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(174): warning C4311: 'type cast': pointer truncation from 'char (*)[19]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(175): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(176): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(177): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(178): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(179): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(180): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(181): warning C4311: 'type cast': pointer truncation from 'char (*)[19]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(182): warning C4311: 'type cast': pointer truncation from 'char (*)[18]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(183): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(184): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(185): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(186): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(187): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(188): warning C4311: 'type cast': pointer truncation from 'char (*)[19]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(189): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(190): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(191): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(192): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(193): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(194): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(195): warning C4311: 'type cast': pointer truncation from 'char (*)[30]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(196): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(197): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(198): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(199): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(200): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(201): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(202): warning C4311: 'type cast': pointer truncation from 'char (*)[19]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(203): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(204): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(205): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(206): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(207): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(208): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(209): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(210): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(211): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(212): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(213): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(214): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(215): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(216): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(217): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(218): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(219): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(220): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(221): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(222): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(223): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(224): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(225): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(226): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(227): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(228): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(229): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(230): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(231): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(232): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(233): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(234): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(235): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(236): warning C4311: 'type cast': pointer truncation from 'char (*)[10]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(237): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(238): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(239): warning C4311: 'type cast': pointer truncation from 'char (*)[10]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(240): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_zos.h(241): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_extra.h(1): warning C4311: 'type cast': pointer truncation from 'char (*)[13]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_extra.h(2): warning C4311: 'type cast': pointer truncation from 'char (*)[13]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_extra.h(3): warning C4311: 'type cast': pointer truncation from 'char (*)[15]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_extra.h(4): warning C4311: 'type cast': pointer truncation from 'char (*)[15]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_extra.h(5): warning C4311: 'type cast': pointer truncation from 'char (*)[14]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_extra.h(6): warning C4311: 'type cast': pointer truncation from 'char (*)[17]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_extra.h(7): warning C4311: 'type cast': pointer truncation from 'char (*)[10]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_extra.h(8): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_extra.h(9): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_extra.h(10): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_extra.h(11): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\aliases_extra.h(12): warning C4311: 'type cast': pointer truncation from 'char (*)[14]' to 'long'
+.././../src/v1.18-8006e03beb.clean/lib/iconv.c(493): warning C4090: 'function': different 'const' qualifiers
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(1): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(2): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(3): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(4): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(5): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(6): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(7): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(8): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(9): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(10): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(11): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(12): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(13): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(14): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(15): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(16): warning C4311: 'type cast': pointer truncation from 'char (*)[15]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(17): warning C4311: 'type cast': pointer truncation from 'char (*)[14]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(18): warning C4311: 'type cast': pointer truncation from 'char (*)[15]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(19): warning C4311: 'type cast': pointer truncation from 'char (*)[14]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(20): warning C4311: 'type cast': pointer truncation from 'char (*)[4]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(21): warning C4311: 'type cast': pointer truncation from 'char (*)[5]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(22): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(23): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(24): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(25): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(26): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(27): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(28): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(29): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(30): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(31): warning C4311: 'type cast': pointer truncation from 'char (*)[12]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(32): warning C4311: 'type cast': pointer truncation from 'char (*)[12]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(33): warning C4311: 'type cast': pointer truncation from 'char (*)[12]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(34): warning C4311: 'type cast': pointer truncation from 'char (*)[12]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(35): warning C4311: 'type cast': pointer truncation from 'char (*)[12]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(36): warning C4311: 'type cast': pointer truncation from 'char (*)[12]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(37): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(38): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(39): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(40): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(41): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(42): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(43): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(44): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(45): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(46): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(47): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(48): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(49): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(50): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(51): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(52): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(53): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(54): warning C4311: 'type cast': pointer truncation from 'char (*)[17]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(55): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(56): warning C4311: 'type cast': pointer truncation from 'char (*)[12]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(57): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(58): warning C4311: 'type cast': pointer truncation from 'char (*)[12]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(59): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(60): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(61): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(62): warning C4311: 'type cast': pointer truncation from 'char (*)[10]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(63): warning C4311: 'type cast': pointer truncation from 'char (*)[10]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(64): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(65): warning C4311: 'type cast': pointer truncation from 'char (*)[10]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(66): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(67): warning C4311: 'type cast': pointer truncation from 'char (*)[10]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(68): warning C4311: 'type cast': pointer truncation from 'char (*)[17]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(69): warning C4311: 'type cast': pointer truncation from 'char (*)[12]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(70): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(71): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(72): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(73): warning C4311: 'type cast': pointer truncation from 'char (*)[10]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(74): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(75): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(76): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(77): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(78): warning C4311: 'type cast': pointer truncation from 'char (*)[5]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(79): warning C4311: 'type cast': pointer truncation from 'char (*)[18]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(80): warning C4311: 'type cast': pointer truncation from 'char (*)[10]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(81): warning C4311: 'type cast': pointer truncation from 'char (*)[10]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(82): warning C4311: 'type cast': pointer truncation from 'char (*)[10]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(83): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(84): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(85): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(86): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(87): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(88): warning C4311: 'type cast': pointer truncation from 'char (*)[10]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(89): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(90): warning C4311: 'type cast': pointer truncation from 'char (*)[12]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(91): warning C4311: 'type cast': pointer truncation from 'char (*)[14]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(92): warning C4311: 'type cast': pointer truncation from 'char (*)[14]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(93): warning C4311: 'type cast': pointer truncation from 'char (*)[15]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(94): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(95): warning C4311: 'type cast': pointer truncation from 'char (*)[4]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(96): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(97): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(98): warning C4311: 'type cast': pointer truncation from 'char (*)[13]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(99): warning C4311: 'type cast': pointer truncation from 'char (*)[12]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(100): warning C4311: 'type cast': pointer truncation from 'char (*)[16]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(101): warning C4311: 'type cast': pointer truncation from 'char (*)[3]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(102): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(103): warning C4311: 'type cast': pointer truncation from 'char (*)[5]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(104): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(105): warning C4311: 'type cast': pointer truncation from 'char (*)[16]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(106): warning C4311: 'type cast': pointer truncation from 'char (*)[16]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(107): warning C4311: 'type cast': pointer truncation from 'char (*)[16]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(108): warning C4311: 'type cast': pointer truncation from 'char (*)[11]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(109): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(110): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(111): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical.h(112): warning C4311: 'type cast': pointer truncation from 'char (*)[12]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_aix.h(1): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_aix.h(2): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_aix.h(3): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_aix.h(4): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_aix.h(5): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_aix.h(6): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_aix.h(7): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_aix.h(8): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_aix.h(9): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_osf1.h(1): warning C4311: 'type cast': pointer truncation from 'char (*)[10]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_osf1.h(2): warning C4311: 'type cast': pointer truncation from 'char (*)[10]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_dos.h(1): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_dos.h(2): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_dos.h(3): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_dos.h(4): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_dos.h(5): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_dos.h(6): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_dos.h(7): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_dos.h(8): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_dos.h(9): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_dos.h(10): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_dos.h(11): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_dos.h(12): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_dos.h(13): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_dos.h(14): warning C4311: 'type cast': pointer truncation from 'char (*)[6]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_dos.h(15): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(1): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(2): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(3): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(4): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(5): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(6): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(7): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(8): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(9): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(10): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(11): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(12): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(13): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(14): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(15): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(16): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(17): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(18): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(19): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(20): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(21): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(22): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(23): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(24): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(25): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(26): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(27): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(28): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(29): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(30): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(31): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(32): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(33): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(34): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(35): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(36): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(37): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(38): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(39): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(40): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(41): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(42): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(43): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(44): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(45): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(46): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(47): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(48): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(49): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(50): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(51): warning C4311: 'type cast': pointer truncation from 'char (*)[9]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(52): warning C4311: 'type cast': pointer truncation from 'char (*)[10]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_zos.h(53): warning C4311: 'type cast': pointer truncation from 'char (*)[10]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_extra.h(1): warning C4311: 'type cast': pointer truncation from 'char (*)[13]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_extra.h(2): warning C4311: 'type cast': pointer truncation from 'char (*)[15]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_extra.h(3): warning C4311: 'type cast': pointer truncation from 'char (*)[14]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_extra.h(4): warning C4311: 'type cast': pointer truncation from 'char (*)[10]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_extra.h(5): warning C4311: 'type cast': pointer truncation from 'char (*)[7]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_extra.h(6): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_extra.h(7): warning C4311: 'type cast': pointer truncation from 'char (*)[14]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_local.h(1): warning C4311: 'type cast': pointer truncation from 'char (*)[5]' to 'long'
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\lib\canonical_local.h(2): warning C4311: 'type cast': pointer truncation from 'char (*)[8]' to 'long'
+INPUT:.././../src/v1.18-8006e03beb.clean/lib/../windows/libiconv.rc
+OUTPUT:.libs/libiconv.res.obj
+rc.exe -DPACKAGE_VERSION_STRING="1.18" -DPACKAGE_VERSION_MAJOR=1 -DPACKAGE_VERSION_MINOR=18 -DPACKAGE_VERSION_SUBMINOR=0 -fo .libs/libiconv.res.obj .././../src/v1.18-8006e03beb.clean/lib/../windows/libiconv.rc
+Microsoft (R) Windows (R) Resource Compiler Version 10.0.10011.16384
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+Makefile:70: update target 'libiconv.la' due to: target does not exist
+/bin/sh ../libtool --mode=link compile cl.exe -Xlinker -Xlinker -Xlinker -LIBPATH:D:/ReposGitHub/nLARN/vcpkg_installed/x64-windows/debug/lib -Xlinker -Xlinker -Xlinker -machine:x64 -Xlinker -Xlinker -Xlinker -nologo -Xlinker -Xlinker -Xlinker -debug -Xlinker -Xlinker -Xlinker -INCREMENTAL -Wl,--export-all-symbols -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1  -o libiconv.la -rpath /D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/debug/lib -version-info 9:0:7 -no-undefined iconv.lo localcharset.lo compat.lo iconv-exports.lo libiconv.res.lo
+libtool: link: dumpbin.exe -symbols -headers  .libs/iconv.obj .libs/localcharset.obj .libs/compat.obj .libs/iconv-exports.obj .libs/libiconv.res.obj   | gawk '     {last_section=section; section=$ 3};     /^COFF SYMBOL TABLE/{for(i in hide) delete hide[i]};     /Section length .*#relocs.*(pick any)/{hide[last_section]=1};     /^ *Symbol name *: /{split($ 0,sn,":"); si=substr(sn[2],2)};     /^ *Type *: code/{print "T",si,substr(si,length(prfx))};     /^ *Type *: data/{print "I",si,substr(si,length(prfx))};     $ 0!~/External *\|/{next};     / 0+ UNDEF /{next}; / UNDEF \([^|]\)*()/{next};     {if(hide[section]) next};     {f="D"}; $ 0~/\(\).*\|/{f="T"};     {split($ 0,a,/\||\r/); split(a[2],s)};     s[1]~/^[@?]/{print f,s[1],s[1]; next};     s[1]~prfx {split(s[1],t,"@"); print f,t[1],substr(t[1],length(prfx))}     ' prfx=^ | /usr/bin/sed '/ __gnu_lto/d' | /usr/bin/sed -e '/^[BCDGRS][ ]/s/.*[ ]\([^ ]*\)/\1,DATA/' | /usr/bin/sed -e '/^[AITW][ ]/s/.*[ ]//' | sort | uniq > .libs/iconv.exp
+libtool: link: if test DEF = "`/usr/bin/sed -n -e 's/^[	 ]*//' -e '/^\(;.*\)*$/d' -e 's/^\(EXPORTS\|LIBRARY\)\([	 ].*\)*$/DEF/p' -e q .libs/iconv.exp`" ; then cp ".libs/iconv.exp" ".libs/iconv-2.dll.def"; echo ".libs\\iconv-2.dll.def" > ".libs/iconv-2.dll.exp"; else /usr/bin/sed -e 's/^/-link -EXPORT:/' < .libs/iconv.exp > .libs/iconv-2.dll.exp; fi
+libtool: link:  compile cl.exe -Fe.libs\\iconv-2.dll  .libs/iconv.obj .libs/localcharset.obj .libs/compat.obj .libs/iconv-exports.obj .libs/libiconv.res.obj   -Xlinker -LIBPATH:D:/ReposGitHub/nLARN/vcpkg_installed/x64-windows/debug/lib -Xlinker -machine:x64 -Xlinker -nologo -Xlinker -debug -Xlinker -INCREMENTAL --export-all-symbols -nologo -utf-8 -MP -MDd -Z7 -Ob0 -Od -RTC1    "@.libs\\iconv-2.dll.exp" -Wl,-DLL,-IMPLIB:".libs\\iconv.lib"
+cl : Command line warning D9002 : ignoring unknown option '--export-all-symbols'
+cl : Command line warning D9002 : ignoring unknown option '--export-all-symbols'
+cl : Command line warning D9002 : ignoring unknown option '--export-all-symbols'
+cl : Command line warning D9002 : ignoring unknown option '--export-all-symbols'
+cl : Command line warning D9002 : ignoring unknown option '--export-all-symbols'
+   Creating library .libs\iconv.lib and object .libs\iconv.exp
+libtool: link:  linknames=
+libtool: link: ( cd ".libs" && rm -f "libiconv.la" && cp -pR "../libiconv.la" "libiconv.la" )
+make[1]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/lib'
+cd srclib && /usr/bin/make all
+make[1]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/srclib'
+cd .. && /usr/bin/make  am--refresh
+make[2]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg'
+make[2]: Nothing to be done for 'am--refresh'.
+make[2]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg'
+cd .. && /usr/bin/make  am--refresh
+make[2]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg'
+make[2]: Nothing to be done for 'am--refresh'.
+make[2]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg'
+make[2]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg'
+make[2]: Nothing to be done for 'am--refresh'.
+make[2]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg'
+Makefile:2188: update target 'alloca.h' due to: target does not exist
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+  -e 's|@''HAVE_ALLOCA_H''@||g' \
+  .././../src/v1.18-8006e03beb.clean/srclib/alloca.in.h > alloca.h-t
+mv alloca.h-t alloca.h
+Makefile:2217: update target 'errno.h' due to: target does not exist
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@||g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_ERRNO_H''@|"C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\ucrt\\errno.h"|g' \
+      -e 's|@''EMULTIHOP_HIDDEN''@|0|g' \
+      -e 's|@''EMULTIHOP_VALUE''@||g' \
+      -e 's|@''ENOLINK_HIDDEN''@|0|g' \
+      -e 's|@''ENOLINK_VALUE''@||g' \
+      -e 's|@''EOVERFLOW_HIDDEN''@|0|g' \
+      -e 's|@''EOVERFLOW_VALUE''@||g' \
+      .././../src/v1.18-8006e03beb.clean/srclib/errno.in.h > errno.h-t
+mv errno.h-t errno.h
+Makefile:2236: update target 'error.h' due to: target does not exist
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''HAVE_ERROR_H''@|0|g' \
+      -e 's|@''INCLUDE_NEXT''@|include|g' \
+      -e 's|@''NEXT_ERROR_H''@|<error.h>|g' \
+      -e 's|@''HAVE_ERROR''@|0|g' \
+      -e 's|@''HAVE_ERROR_AT_LINE''@|0|g' \
+      -e 's|@''REPLACE_ERROR''@|0|g' \
+      -e 's|@''REPLACE_ERROR_AT_LINE''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r .././../src/v1.18-8006e03beb.clean/srclib/c++defs.h' \
+      .././../src/v1.18-8006e03beb.clean/srclib/error.in.h > error.h-t
+mv error.h-t error.h
+Makefile:2252: update target 'fcntl.h' due to: target does not exist
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@||g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_FCNTL_H''@|"C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\ucrt\\fcntl.h"|g' \
+      -e 's/@''GNULIB_CREAT''@/0/g' \
+      -e 's/@''GNULIB_FCNTL''@/1/g' \
+      -e 's/@''GNULIB_NONBLOCKING''@/0/g' \
+      -e 's/@''GNULIB_OPEN''@/1/g' \
+      -e 's/@''GNULIB_OPENAT''@/0/g' \
+      -e 's/@''GNULIB_MDA_CREAT''@/1/g' \
+      -e 's/@''GNULIB_MDA_OPEN''@/1/g' \
+      -e 's|@''HAVE_FCNTL''@|0|g' \
+      -e 's|@''HAVE_OPENAT''@|1|g' \
+      -e 's|@''REPLACE_CREAT''@|0|g' \
+      -e 's|@''REPLACE_FCNTL''@|0|g' \
+      -e 's|@''REPLACE_OPEN''@|1|g' \
+      -e 's|@''REPLACE_OPENAT''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r .././../src/v1.18-8006e03beb.clean/srclib/c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r .././../src/v1.18-8006e03beb.clean/srclib/arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r .././../src/v1.18-8006e03beb.clean/srclib/warn-on-use.h' \
+      .././../src/v1.18-8006e03beb.clean/srclib/fcntl.in.h > fcntl.h-t
+mv fcntl.h-t fcntl.h
+Makefile:2278: update target 'malloc/scratch_buffer.gl.h' due to: target does not exist
+/usr/bin/mkdir -p 'malloc'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|__always_inline|inline _GL_ATTRIBUTE_ALWAYS_INLINE|g' \
+      -e 's|__glibc_likely|_GL_LIKELY|g' \
+      -e 's|__glibc_unlikely|_GL_UNLIKELY|g' \
+      -e '/libc_hidden_proto/d' \
+      .././../src/v1.18-8006e03beb.clean/srclib/malloc/scratch_buffer.h > malloc/scratch_buffer.gl.h-t
+Makefile:2290: update target 'inttypes.h' due to: target does not exist
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's/@''HAVE_INTTYPES_H''@/1/g' \
+      -e 's|@''INCLUDE_NEXT''@|include|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@||g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_INTTYPES_H''@|"C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\ucrt\\inttypes.h"|g' \
+      -e 's/@''APPLE_UNIVERSAL_BUILD''@/0/g' \
+      -e 's/@''PRIPTR_PREFIX''@/__PRIPTR_PREFIX/g' \
+      -e 's/@''GNULIB_IMAXABS''@/0/g' \
+      -e 's/@''GNULIB_IMAXDIV''@/0/g' \
+      -e 's/@''GNULIB_STRTOIMAX''@/0/g' \
+      -e 's/@''GNULIB_STRTOUMAX''@/0/g' \
+      -e 's/@''HAVE_DECL_IMAXABS''@/1/g' \
+      -e 's/@''HAVE_DECL_IMAXDIV''@/1/g' \
+      -e 's/@''HAVE_DECL_STRTOIMAX''@/1/g' \
+      -e 's/@''HAVE_DECL_STRTOUMAX''@/1/g' \
+      -e 's/@''HAVE_IMAXDIV_T''@/1/g' \
+      -e 's/@''REPLACE_IMAXABS''@/0/g' \
+      -e 's/@''REPLACE_IMAXDIV''@/0/g' \
+      -e 's/@''REPLACE_STRTOIMAX''@/0/g' \
+      -e 's/@''REPLACE_STRTOUMAX''@/0/g' \
+      -e 's/@''INT32_MAX_LT_INTMAX_MAX''@/1/g' \
+      -e 's/@''INT64_MAX_EQ_LONG_MAX''@/defined _LP64/g' \
+      -e 's/@''UINT32_MAX_LT_UINTMAX_MAX''@/1/g' \
+      -e 's/@''UINT64_MAX_EQ_ULONG_MAX''@/defined _LP64/g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r .././../src/v1.18-8006e03beb.clean/srclib/c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r .././../src/v1.18-8006e03beb.clean/srclib/arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r .././../src/v1.18-8006e03beb.clean/srclib/warn-on-use.h' \
+      .././../src/v1.18-8006e03beb.clean/srclib/inttypes.in.h > inttypes.h-t
+Makefile:2324: update target 'limits.h' due to: target does not exist
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@||g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_LIMITS_H''@|"C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.44.35207\\include\\limits.h"|g' \
+      .././../src/v1.18-8006e03beb.clean/srclib/limits.in.h > limits.h-t
+mv malloc/scratch_buffer.gl.h-t malloc/scratch_buffer.gl.h
+mv limits.h-t limits.h
+mv inttypes.h-t inttypes.h
+Makefile:2350: update target 'signal.h' due to: target does not exist
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@||g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_SIGNAL_H''@|"C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\ucrt\\signal.h"|g' \
+      -e 's/@''GNULIB_PTHREAD_SIGMASK''@/0/g' \
+      -e 's/@''GNULIB_RAISE''@/1/g' \
+      -e 's/@''GNULIB_SIG2STR''@/0/g' \
+      -e 's/@''GNULIB_SIGNAL_H_SIGPIPE''@/1/g' \
+      -e 's/@''GNULIB_SIGPROCMASK''@/1/g' \
+      -e 's/@''GNULIB_SIGACTION''@/0/g' \
+      -e 's|@''HAVE_POSIX_SIGNALBLOCKING''@|0|g' \
+      -e 's|@''HAVE_PTHREAD_SIGMASK''@|1|g' \
+      -e 's|@''HAVE_RAISE''@|1|g' \
+      -e 's|@''HAVE_SIG2STR''@|1|g' \
+      -e 's|@''HAVE_SIGSET_T''@|0|g' \
+      -e 's|@''HAVE_SIGINFO_T''@|1|g' \
+      -e 's|@''HAVE_SIGACTION''@|1|g' \
+      -e 's|@''HAVE_STR2SIG''@|1|g' \
+      -e 's|@''HAVE_STRUCT_SIGACTION_SA_SIGACTION''@|1|g' \
+      -e 's|@''HAVE_TYPE_VOLATILE_SIG_ATOMIC_T''@|1|g' \
+      -e 's|@''HAVE_SIGHANDLER_T''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_SIGMASK''@|0|g' \
+      -e 's|@''REPLACE_RAISE''@|1|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r .././../src/v1.18-8006e03beb.clean/srclib/c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r .././../src/v1.18-8006e03beb.clean/srclib/arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r .././../src/v1.18-8006e03beb.clean/srclib/warn-on-use.h' \
+      .././../src/v1.18-8006e03beb.clean/srclib/signal.in.h > signal.h-t
+Makefile:2384: update target 'stdckdint.h' due to: target does not exist
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+  .././../src/v1.18-8006e03beb.clean/srclib/stdckdint.in.h > stdckdint.h-t
+Makefile:2393: update target 'stddef.h' due to: target does not exist
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@||g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_STDDEF_H''@|"C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\ucrt\\stddef.h"|g' \
+      -e 's|@''NULLPTR_T_NEEDS_STDDEF''@|1|g' \
+      -e 's|@''STDDEF_NOT_IDEMPOTENT''@|0|g' \
+      -e 's|@''REPLACE_NULL''@|0|g' \
+      -e 's|@''HAVE_MAX_ALIGN_T''@|0|g' \
+      .././../src/v1.18-8006e03beb.clean/srclib/stddef.in.h > stddef.h-t
+mv signal.h-t signal.h
+mv stddef.h-t stddef.h
+mv stdckdint.h-t stdckdint.h
+Makefile:2411: update target 'stdint.h' due to: target does not exist
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's/@''HAVE_STDINT_H''@/1/g' \
+      -e 's|@''INCLUDE_NEXT''@|include|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@||g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_STDINT_H''@|"C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.44.35207\\include\\stdint.h"|g' \
+      -e 's/@''HAVE_C99_STDINT_H''@/1/g' \
+      -e 's/@''HAVE_SYS_TYPES_H''@/1/g' \
+      -e 's/@''HAVE_INTTYPES_H''@/1/g' \
+      -e 's/@''HAVE_SYS_INTTYPES_H''@/0/g' \
+      -e 's/@''HAVE_SYS_BITYPES_H''@/0/g' \
+      -e 's/@''HAVE_WCHAR_H''@/1/g' \
+      -e 's/@''APPLE_UNIVERSAL_BUILD''@/0/g' \
+      -e 's/@''BITSIZEOF_PTRDIFF_T''@//g' \
+      -e 's/@''PTRDIFF_T_SUFFIX''@//g' \
+      -e 's/@''BITSIZEOF_SIG_ATOMIC_T''@//g' \
+      -e 's/@''HAVE_SIGNED_SIG_ATOMIC_T''@//g' \
+      -e 's/@''SIG_ATOMIC_T_SUFFIX''@//g' \
+      -e 's/@''BITSIZEOF_SIZE_T''@//g' \
+      -e 's/@''SIZE_T_SUFFIX''@//g' \
+      -e 's/@''BITSIZEOF_WCHAR_T''@//g' \
+      -e 's/@''HAVE_SIGNED_WCHAR_T''@//g' \
+      -e 's/@''WCHAR_T_SUFFIX''@//g' \
+      -e 's/@''BITSIZEOF_WINT_T''@//g' \
+      -e 's/@''HAVE_SIGNED_WINT_T''@//g' \
+      -e 's/@''WINT_T_SUFFIX''@//g' \
+      -e 's/@''GNULIBHEADERS_OVERRIDE_WINT_T''@/1/g' \
+      .././../src/v1.18-8006e03beb.clean/srclib/stdint.in.h > stdint.h-t
+Makefile:2447: update target 'stdio.h' due to: target does not exist
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@||g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_STDIO_H''@|"C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\ucrt\\stdio.h"|g' \
+      -e 's/@''GNULIB_DPRINTF''@/0/g' \
+      -e 's/@''GNULIB_DZPRINTF''@/0/g' \
+      -e 's/@''GNULIB_FCLOSE''@/0/g' \
+      -e 's/@''GNULIB_FDOPEN''@/0/g' \
+      -e 's/@''GNULIB_FFLUSH''@/0/g' \
+      -e 's/@''GNULIB_FGETC''@/1/g' \
+      -e 's/@''GNULIB_FGETS''@/1/g' \
+      -e 's/@''GNULIB_FOPEN''@/0/g' \
+      -e 's/@''GNULIB_FOPEN_GNU''@/0/g' \
+      -e 's/@''GNULIB_FPRINTF''@/1/g' \
+      -e 's/@''GNULIB_FPRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_FPURGE''@/0/g' \
+      -e 's/@''GNULIB_FPUTC''@/1/g' \
+      -e 's/@''GNULIB_FPUTS''@/1/g' \
+      -e 's/@''GNULIB_FREAD''@/1/g' \
+      -e 's/@''GNULIB_FREOPEN''@/0/g' \
+      -e 's/@''GNULIB_FSCANF''@/1/g' \
+      -e 's/@''GNULIB_FSEEK''@/0/g' \
+      -e 's/@''GNULIB_FSEEKO''@/0/g' \
+      -e 's/@''GNULIB_FTELL''@/0/g' \
+      -e 's/@''GNULIB_FTELLO''@/0/g' \
+      -e 's/@''GNULIB_FWRITE''@/1/g' \
+      -e 's/@''GNULIB_FZPRINTF''@/0/g' \
+      -e 's/@''GNULIB_GETC''@/1/g' \
+      -e 's/@''GNULIB_GETCHAR''@/1/g' \
+      -e 's/@''GNULIB_GETDELIM''@/0/g' \
+      -e 's/@''GNULIB_GETLINE''@/0/g' \
+      -e 's/@''GNULIB_OBSTACK_PRINTF''@/0/g' \
+      -e 's/@''GNULIB_OBSTACK_PRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_OBSTACK_ZPRINTF''@/0/g' \
+      -e 's/@''GNULIB_PCLOSE''@/0/g' \
+      -e 's/@''GNULIB_PERROR''@/0/g' \
+      -e 's/@''GNULIB_POPEN''@/0/g' \
+      -e 's/@''GNULIB_PRINTF''@/1/g' \
+      -e 's/@''GNULIB_PRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_PUTC''@/1/g' \
+      -e 's/@''GNULIB_PUTCHAR''@/1/g' \
+      -e 's/@''GNULIB_PUTS''@/1/g' \
+      -e 's/@''GNULIB_REMOVE''@/0/g' \
+      -e 's/@''GNULIB_RENAME''@/0/g' \
+      -e 's/@''GNULIB_RENAMEAT''@/0/g' \
+      -e 's/@''GNULIB_SCANF''@/1/g' \
+      -e 's/@''GNULIB_SNPRINTF''@/0/g' \
+      -e 's/@''GNULIB_SNZPRINTF''@/0/g' \
+      -e 's/@''GNULIB_SPRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_STDIO_H_NONBLOCKING''@/0/g' \
+      -e 's/@''GNULIB_STDIO_H_SIGPIPE''@/1/g' \
+      -e 's/@''GNULIB_SZPRINTF''@/0/g' \
+      -e 's/@''GNULIB_TMPFILE''@/0/g' \
+      -e 's/@''GNULIB_VASPRINTF''@/0/g' \
+      -e 's/@''GNULIB_VASZPRINTF''@/0/g' \
+      -e 's/@''GNULIB_VDPRINTF''@/0/g' \
+      -e 's/@''GNULIB_VDZPRINTF''@/0/g' \
+      -e 's/@''GNULIB_VFPRINTF''@/1/g' \
+      -e 's/@''GNULIB_VFPRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_VFZPRINTF''@/0/g' \
+      -e 's/@''GNULIB_VFSCANF''@/0/g' \
+      -e 's/@''GNULIB_VSCANF''@/0/g' \
+      -e 's/@''GNULIB_VPRINTF''@/1/g' \
+      -e 's/@''GNULIB_VPRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_VSNPRINTF''@/0/g' \
+      -e 's/@''GNULIB_VSNZPRINTF''@/0/g' \
+      -e 's/@''GNULIB_VSPRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_VSZPRINTF''@/0/g' \
+      -e 's/@''GNULIB_VZPRINTF''@/0/g' \
+      -e 's/@''GNULIB_ZPRINTF''@/0/g' \
+      -e 's/@''GNULIB_MDA_FCLOSEALL''@/1/g' \
+      -e 's/@''GNULIB_MDA_FDOPEN''@/1/g' \
+      -e 's/@''GNULIB_MDA_FILENO''@/1/g' \
+      -e 's/@''GNULIB_MDA_GETW''@/1/g' \
+      -e 's/@''GNULIB_MDA_PUTW''@/1/g' \
+      -e 's/@''GNULIB_MDA_TEMPNAM''@/1/g' \
+      < .././../src/v1.18-8006e03beb.clean/srclib/stdio.in.h > stdio.h-t1
+mv stdint.h-t stdint.h
+sed \
+      -e 's|@''HAVE_DECL_FCLOSEALL''@|1|g' \
+      -e 's|@''HAVE_DECL_FPURGE''@|1|g' \
+      -e 's|@''HAVE_DECL_FSEEKO''@|1|g' \
+      -e 's|@''HAVE_DECL_FTELLO''@|1|g' \
+      -e 's|@''HAVE_DECL_GETDELIM''@|1|g' \
+      -e 's|@''HAVE_DECL_GETLINE''@|1|g' \
+      -e 's|@''HAVE_DECL_GETW''@|1|g' \
+      -e 's|@''HAVE_DECL_OBSTACK_PRINTF''@|1|g' \
+      -e 's|@''HAVE_DECL_PUTW''@|1|g' \
+      -e 's|@''HAVE_DECL_SNPRINTF''@|1|g' \
+      -e 's|@''HAVE_DECL_VSNPRINTF''@|1|g' \
+      -e 's|@''HAVE_DPRINTF''@|1|g' \
+      -e 's|@''HAVE_FSEEKO''@|1|g' \
+      -e 's|@''HAVE_FTELLO''@|1|g' \
+      -e 's|@''HAVE_PCLOSE''@|1|g' \
+      -e 's|@''HAVE_POPEN''@|1|g' \
+      -e 's|@''HAVE_RENAMEAT''@|1|g' \
+      -e 's|@''HAVE_VASPRINTF''@|1|g' \
+      -e 's|@''HAVE_VDPRINTF''@|1|g' \
+      < stdio.h-t1 > stdio.h-t2
+Makefile:2591: update target 'stdlib.h' due to: target does not exist
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@||g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_STDLIB_H''@|"C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\ucrt\\stdlib.h"|g' \
+      -e 's/@''GNULIB__EXIT''@/0/g' \
+      -e 's/@''GNULIB_ABORT_DEBUG''@/0/g' \
+      -e 's/@''GNULIB_ALIGNED_ALLOC''@/0/g' \
+      -e 's/@''GNULIB_ATOLL''@/0/g' \
+      -e 's/@''GNULIB_CALLOC_GNU''@/0/g' \
+      -e 's/@''GNULIB_CALLOC_POSIX''@/0/g' \
+      -e 's/@''GNULIB_CANONICALIZE_FILE_NAME''@/1/g' \
+      -e 's/@''GNULIB_FREE_POSIX''@/1/g' \
+      -e 's/@''GNULIB_GETLOADAVG''@/0/g' \
+      -e 's/@''GNULIB_GETPROGNAME''@/1/g' \
+      -e 's/@''GNULIB_GETSUBOPT''@/0/g' \
+      -e 's/@''GNULIB_GRANTPT''@/0/g' \
+      -e 's/@''GNULIB_MALLOC_GNU''@/0/g' \
+      -e 's/@''GNULIB_MALLOC_POSIX''@/1/g' \
+      -e 's/@''GNULIB_MBSTOWCS''@/0/g' \
+      -e 's/@''GNULIB_MBTOWC''@/0/g' \
+      -e 's/@''GNULIB_MKDTEMP''@/0/g' \
+      -e 's/@''GNULIB_MKOSTEMP''@/0/g' \
+      -e 's/@''GNULIB_MKOSTEMPS''@/0/g' \
+      -e 's/@''GNULIB_MKSTEMP''@/0/g' \
+      -e 's/@''GNULIB_MKSTEMPS''@/0/g' \
+      -e 's/@''GNULIB_POSIX_MEMALIGN''@/0/g' \
+      -e 's/@''GNULIB_POSIX_OPENPT''@/0/g' \
+      -e 's/@''GNULIB_PTSNAME''@/0/g' \
+      -e 's/@''GNULIB_PTSNAME_R''@/0/g' \
+      -e 's/@''GNULIB_PUTENV''@/0/g' \
+      -e 's/@''GNULIB_QSORT_R''@/0/g' \
+      -e 's/@''GNULIB_RAND''@/0/g' \
+      -e 's/@''GNULIB_RANDOM''@/0/g' \
+      -e 's/@''GNULIB_RANDOM_R''@/0/g' \
+      -e 's/@''GNULIB_REALLOC_POSIX''@/1/g' \
+      -e 's/@''GNULIB_REALLOCARRAY''@/0/g' \
+      -e 's/@''GNULIB_REALPATH''@/1/g' \
+      -e 's/@''GNULIB_RPMATCH''@/0/g' \
+      -e 's/@''GNULIB_SECURE_GETENV''@/0/g' \
+      -e 's/@''GNULIB_SETENV''@/0/g' \
+      -e 's/@''GNULIB_STACK_TRACE''@/0/g' \
+      -e 's/@''GNULIB_STRTOD''@/0/g' \
+      -e 's/@''GNULIB_STRTOF''@/0/g' \
+      -e 's/@''GNULIB_STRTOL''@/0/g' \
+      -e 's/@''GNULIB_STRTOLD''@/0/g' \
+      -e 's/@''GNULIB_STRTOLL''@/0/g' \
+      -e 's/@''GNULIB_STRTOUL''@/0/g' \
+      -e 's/@''GNULIB_STRTOULL''@/0/g' \
+      -e 's/@''GNULIB_SYSTEM_POSIX''@/0/g' \
+      -e 's/@''GNULIB_UNLOCKPT''@/0/g' \
+      -e 's/@''GNULIB_UNSETENV''@/0/g' \
+      -e 's/@''GNULIB_WCTOMB''@/0/g' \
+      -e 's/@''GNULIB_MDA_ECVT''@/1/g' \
+      -e 's/@''GNULIB_MDA_FCVT''@/1/g' \
+      -e 's/@''GNULIB_MDA_GCVT''@/1/g' \
+      -e 's/@''GNULIB_MDA_MKTEMP''@/1/g' \
+      -e 's/@''GNULIB_MDA_PUTENV''@/1/g' \
+      < .././../src/v1.18-8006e03beb.clean/srclib/stdlib.in.h > stdlib.h-t1
+Makefile:2754: update target 'string.h' due to: target does not exist
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@||g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_STRING_H''@|"C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\ucrt\\string.h"|g' \
+      -e 's/@''GNULIB_EXPLICIT_BZERO''@/0/g' \
+      -e 's/@''GNULIB_FFSL''@/0/g' \
+      -e 's/@''GNULIB_FFSLL''@/0/g' \
+      -e 's/@''GNULIB_MBSLEN''@/0/g' \
+      -e 's/@''GNULIB_MBSNLEN''@/0/g' \
+      -e 's/@''GNULIB_MBSCHR''@/0/g' \
+      -e 's/@''GNULIB_MBSRCHR''@/0/g' \
+      -e 's/@''GNULIB_MBSSTR''@/0/g' \
+      -e 's/@''GNULIB_MBSCASECMP''@/0/g' \
+      -e 's/@''GNULIB_MBSNCASECMP''@/0/g' \
+      -e 's/@''GNULIB_MBSPCASECMP''@/0/g' \
+      -e 's/@''GNULIB_MBSCASESTR''@/0/g' \
+      -e 's/@''GNULIB_MBSCSPN''@/0/g' \
+      -e 's/@''GNULIB_MBSPBRK''@/0/g' \
+      -e 's/@''GNULIB_MBSSPN''@/0/g' \
+      -e 's/@''GNULIB_MBSSEP''@/0/g' \
+      -e 's/@''GNULIB_MBSTOK_R''@/0/g' \
+      -e 's/@''GNULIB_MEMCHR''@/0/g' \
+      -e 's/@''GNULIB_MEMMEM''@/0/g' \
+      -e 's/@''GNULIB_MEMPCPY''@/1/g' \
+      -e 's/@''GNULIB_MEMRCHR''@/0/g' \
+      -e 's/@''GNULIB_MEMSET_EXPLICIT''@/0/g' \
+      -e 's/@''GNULIB_RAWMEMCHR''@/1/g' \
+      -e 's/@''GNULIB_STPCPY''@/0/g' \
+      -e 's/@''GNULIB_STPNCPY''@/0/g' \
+      -e 's/@''GNULIB_STRCHRNUL''@/0/g' \
+      -e 's/@''GNULIB_STRDUP''@/0/g' \
+      -e 's/@''GNULIB_STRNCAT''@/0/g' \
+      -e 's/@''GNULIB_STRNDUP''@/0/g' \
+      -e 's/@''GNULIB_STRNLEN''@/0/g' \
+      -e 's/@''GNULIB_STRPBRK''@/0/g' \
+      -e 's/@''GNULIB_STRSEP''@/0/g' \
+      -e 's/@''GNULIB_STRSTR''@/0/g' \
+      -e 's/@''GNULIB_STRCASESTR''@/0/g' \
+      -e 's/@''GNULIB_STRTOK_R''@/0/g' \
+      -e 's/@''GNULIB_STRERROR''@/1/g' \
+      -e 's/@''GNULIB_STRERROR_R''@/0/g' \
+      -e 's/@''GNULIB_STRERRORNAME_NP''@/0/g' \
+      -e 's/@''GNULIB_SIGABBREV_NP''@/0/g' \
+      -e 's/@''GNULIB_SIGDESCR_NP''@/0/g' \
+      -e 's/@''GNULIB_STRSIGNAL''@/0/g' \
+      -e 's/@''GNULIB_STRVERSCMP''@/0/g' \
+      -e 's/@''GNULIB_MDA_MEMCCPY''@/1/g' \
+      -e 's/@''GNULIB_MDA_STRDUP''@/1/g' \
+      -e 's/@''GNULIB_FREE_POSIX''@/1/g' \
+      < .././../src/v1.18-8006e03beb.clean/srclib/string.in.h > string.h-t1
+Makefile:2864: update target 'sys/stat.h' due to: target does not exist
+/usr/bin/mkdir -p 'sys'
+sed \
+      -e 's|@''REPLACE_DPRINTF''@|0|g' \
+      -e 's|@''REPLACE_FCLOSE''@|0|g' \
+      -e 's|@''REPLACE_FDOPEN''@|0|g' \
+      -e 's|@''REPLACE_FFLUSH''@|0|g' \
+      -e 's|@''REPLACE_FOPEN''@|0|g' \
+      -e 's|@''REPLACE_FOPEN_FOR_FOPEN_GNU''@|0|g' \
+      -e 's|@''REPLACE_FPRINTF''@|0|g' \
+      -e 's|@''REPLACE_FPURGE''@|0|g' \
+      -e 's|@''REPLACE_FREOPEN''@|0|g' \
+      -e 's|@''REPLACE_FSEEK''@|0|g' \
+      -e 's|@''REPLACE_FSEEKO''@|0|g' \
+      -e 's|@''REPLACE_FTELL''@|0|g' \
+      -e 's|@''REPLACE_FTELLO''@|0|g' \
+      -e 's|@''REPLACE_GETDELIM''@|0|g' \
+      -e 's|@''REPLACE_GETLINE''@|0|g' \
+      -e 's|@''REPLACE_OBSTACK_PRINTF''@|0|g' \
+      -e 's|@''REPLACE_PERROR''@|0|g' \
+      -e 's|@''REPLACE_POPEN''@|0|g' \
+      -e 's|@''REPLACE_PRINTF''@|0|g' \
+      -e 's|@''REPLACE_REMOVE''@|0|g' \
+      -e 's|@''REPLACE_RENAME''@|0|g' \
+      -e 's|@''REPLACE_RENAMEAT''@|0|g' \
+      -e 's|@''REPLACE_SNPRINTF''@|0|g' \
+      -e 's|@''REPLACE_SPRINTF''@|0|g' \
+      -e 's|@''REPLACE_STDIO_READ_FUNCS''@|0|g' \
+      -e 's|@''REPLACE_STDIO_WRITE_FUNCS''@|1|g' \
+      -e 's|@''REPLACE_TMPFILE''@|0|g' \
+      -e 's|@''REPLACE_VASPRINTF''@|0|g' \
+      -e 's|@''REPLACE_VDPRINTF''@|0|g' \
+      -e 's|@''REPLACE_VFPRINTF''@|0|g' \
+      -e 's|@''REPLACE_VPRINTF''@|0|g' \
+      -e 's|@''REPLACE_VSNPRINTF''@|0|g' \
+      -e 's|@''REPLACE_VSPRINTF''@|0|g' \
+      -e 's|@''ASM_SYMBOL_PREFIX''@|""|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r .././../src/v1.18-8006e03beb.clean/srclib/c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r .././../src/v1.18-8006e03beb.clean/srclib/arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r .././../src/v1.18-8006e03beb.clean/srclib/warn-on-use.h' \
+      < stdio.h-t2 > stdio.h-t3
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@||g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_SYS_STAT_H''@|"C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\ucrt\\sys/stat.h"|g' \
+      -e 's|@''WINDOWS_64_BIT_ST_SIZE''@|1|g' \
+      -e 's|@''WINDOWS_STAT_TIMESPEC''@|0|g' \
+      -e 's/@''GNULIB_CHMOD''@/0/g' \
+      -e 's/@''GNULIB_FCHMODAT''@/0/g' \
+      -e 's/@''GNULIB_FSTAT''@/1/g' \
+      -e 's/@''GNULIB_FSTATAT''@/0/g' \
+      -e 's/@''GNULIB_FUTIMENS''@/0/g' \
+      -e 's/@''GNULIB_GETUMASK''@/0/g' \
+      -e 's/@''GNULIB_LCHMOD''@/0/g' \
+      -e 's/@''GNULIB_LSTAT''@/0/g' \
+      -e 's/@''GNULIB_MKDIR''@/0/g' \
+      -e 's/@''GNULIB_MKDIRAT''@/0/g' \
+      -e 's/@''GNULIB_MKFIFO''@/0/g' \
+      -e 's/@''GNULIB_MKFIFOAT''@/0/g' \
+      -e 's/@''GNULIB_MKNOD''@/0/g' \
+      -e 's/@''GNULIB_MKNODAT''@/0/g' \
+      -e 's/@''GNULIB_STAT''@/1/g' \
+      -e 's/@''GNULIB_UTIMENSAT''@/0/g' \
+      -e 's/@''GNULIB_OVERRIDES_STRUCT_STAT''@/0/g' \
+      -e 's/@''GNULIB_MDA_CHMOD''@/1/g' \
+      -e 's/@''GNULIB_MDA_MKDIR''@/1/g' \
+      -e 's/@''GNULIB_MDA_UMASK''@/1/g' \
+      -e 's|@''HAVE_FCHMODAT''@|1|g' \
+      -e 's|@''HAVE_FSTATAT''@|1|g' \
+      -e 's|@''HAVE_FUTIMENS''@|1|g' \
+      -e 's|@''HAVE_GETUMASK''@|1|g' \
+      -e 's|@''HAVE_LCHMOD''@|1|g' \
+      -e 's|@''HAVE_LSTAT''@|1|g' \
+      -e 's|@''HAVE_MKDIRAT''@|1|g' \
+      -e 's|@''HAVE_MKFIFO''@|1|g' \
+      -e 's|@''HAVE_MKFIFOAT''@|1|g' \
+      -e 's|@''HAVE_MKNOD''@|1|g' \
+      -e 's|@''HAVE_MKNODAT''@|1|g' \
+      -e 's|@''HAVE_UTIMENSAT''@|1|g' \
+      -e 's|@''REPLACE_CHMOD''@|0|g' \
+      -e 's|@''REPLACE_FCHMODAT''@|0|g' \
+      -e 's|@''REPLACE_FSTAT''@|1|g' \
+      -e 's|@''REPLACE_FSTATAT''@|0|g' \
+      -e 's|@''REPLACE_FUTIMENS''@|0|g' \
+      -e 's|@''REPLACE_LSTAT''@|0|g' \
+      -e 's|@''REPLACE_MKDIR''@|0|g' \
+      -e 's|@''REPLACE_MKFIFO''@|0|g' \
+      -e 's|@''REPLACE_MKFIFOAT''@|0|g' \
+      -e 's|@''REPLACE_MKNOD''@|0|g' \
+      -e 's|@''REPLACE_MKNODAT''@|0|g' \
+      -e 's|@''REPLACE_STAT''@|1|g' \
+      -e 's|@''REPLACE_UTIMENSAT''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r .././../src/v1.18-8006e03beb.clean/srclib/c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r .././../src/v1.18-8006e03beb.clean/srclib/arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r .././../src/v1.18-8006e03beb.clean/srclib/warn-on-use.h' \
+      .././../src/v1.18-8006e03beb.clean/srclib/sys_stat.in.h > sys/stat.h-t
+sed \
+      -e 's|@''HAVE__EXIT''@|1|g' \
+      -e 's|@''HAVE_ALIGNED_ALLOC''@|1|g' \
+      -e 's|@''HAVE_ATOLL''@|1|g' \
+      -e 's|@''HAVE_CANONICALIZE_FILE_NAME''@|0|g' \
+      -e 's|@''HAVE_DECL_ECVT''@|1|g' \
+      -e 's|@''HAVE_DECL_FCVT''@|1|g' \
+      -e 's|@''HAVE_DECL_GCVT''@|1|g' \
+      -e 's|@''HAVE_DECL_GETLOADAVG''@|1|g' \
+      -e 's|@''HAVE_DECL_PROGRAM_INVOCATION_NAME''@|0|g' \
+      -e 's|@''HAVE_GETPROGNAME''@|0|g' \
+      -e 's|@''HAVE_GETSUBOPT''@|1|g' \
+      -e 's|@''HAVE_GRANTPT''@|1|g' \
+      -e 's|@''HAVE_INITSTATE''@|1|g' \
+      -e 's|@''HAVE_DECL_INITSTATE''@|1|g' \
+      -e 's|@''HAVE_MBTOWC''@|1|g' \
+      -e 's|@''HAVE_MKDTEMP''@|1|g' \
+      -e 's|@''HAVE_MKOSTEMP''@|1|g' \
+      -e 's|@''HAVE_MKOSTEMPS''@|1|g' \
+      -e 's|@''HAVE_MKSTEMP''@|1|g' \
+      -e 's|@''HAVE_MKSTEMPS''@|1|g' \
+      -e 's|@''HAVE_POSIX_MEMALIGN''@|1|g' \
+      -e 's|@''HAVE_POSIX_OPENPT''@|1|g' \
+      -e 's|@''HAVE_PTSNAME''@|1|g' \
+      -e 's|@''HAVE_PTSNAME_R''@|1|g' \
+      -e 's|@''HAVE_QSORT_R''@|1|g' \
+      -e 's|@''HAVE_RANDOM''@|1|g' \
+      -e 's|@''HAVE_RANDOM_H''@|1|g' \
+      -e 's|@''HAVE_RANDOM_R''@|1|g' \
+      -e 's|@''HAVE_REALLOCARRAY''@|1|g' \
+      -e 's|@''HAVE_REALPATH''@|0|g' \
+      -e 's|@''HAVE_RPMATCH''@|1|g' \
+      -e 's|@''HAVE_SECURE_GETENV''@|1|g' \
+      -e 's|@''HAVE_DECL_SETENV''@|0|g' \
+      -e 's|@''HAVE_SETSTATE''@|1|g' \
+      -e 's|@''HAVE_DECL_SETSTATE''@|1|g' \
+      -e 's|@''HAVE_STRTOD''@|1|g' \
+      -e 's|@''HAVE_STRTOF''@|1|g' \
+      -e 's|@''HAVE_STRTOL''@|1|g' \
+      -e 's|@''HAVE_STRTOLD''@|1|g' \
+      -e 's|@''HAVE_STRTOLL''@|1|g' \
+      -e 's|@''HAVE_STRTOUL''@|1|g' \
+      -e 's|@''HAVE_STRTOULL''@|1|g' \
+      -e 's|@''HAVE_STRUCT_RANDOM_DATA''@|1|g' \
+      -e 's|@''HAVE_SYS_LOADAVG_H''@|0|g' \
+      -e 's|@''HAVE_UNLOCKPT''@|1|g' \
+      -e 's|@''HAVE_DECL_UNSETENV''@|1|g' \
+      < stdlib.h-t1 > stdlib.h-t2
+rm -f stdio.h-t1 stdio.h-t2
+mv sys/stat.h-t sys/stat.h
+sed \
+      -e 's|@''REPLACE__EXIT''@|0|g' \
+      -e 's|@''REPLACE_ABORT''@|0|g' \
+      -e 's|@''REPLACE_ALIGNED_ALLOC''@|0|g' \
+      -e 's|@''REPLACE_CALLOC_FOR_CALLOC_GNU''@|0|g' \
+      -e 's|@''REPLACE_CALLOC_FOR_CALLOC_POSIX''@|0|g' \
+      -e 's|@''REPLACE_CANONICALIZE_FILE_NAME''@|0|g' \
+      -e 's|@''REPLACE_FREE''@|1|g' \
+      -e 's|@''REPLACE_GETLOADAVG''@|0|g' \
+      -e 's|@''REPLACE_GETPROGNAME''@|0|g' \
+      -e 's|@''REPLACE_GETSUBOPT''@|0|g' \
+      -e 's|@''REPLACE_INITSTATE''@|0|g' \
+      -e 's|@''REPLACE_MALLOC_FOR_MALLOC_GNU''@|0|g' \
+      -e 's|@''REPLACE_MALLOC_FOR_MALLOC_POSIX''@|0|g' \
+      -e 's|@''REPLACE_MB_CUR_MAX''@|0|g' \
+      -e 's|@''REPLACE_MBSTOWCS''@|0|g' \
+      -e 's|@''REPLACE_MBTOWC''@|0|g' \
+      -e 's|@''REPLACE_MKOSTEMP''@|0|g' \
+      -e 's|@''REPLACE_MKOSTEMPS''@|0|g' \
+      -e 's|@''REPLACE_MKSTEMP''@|0|g' \
+      -e 's|@''REPLACE_POSIX_MEMALIGN''@|0|g' \
+      -e 's|@''REPLACE_POSIX_OPENPT''@|0|g' \
+      -e 's|@''REPLACE_PTSNAME''@|0|g' \
+      -e 's|@''REPLACE_PTSNAME_R''@|0|g' \
+      -e 's|@''REPLACE_PUTENV''@|0|g' \
+      -e 's|@''REPLACE_QSORT_R''@|0|g' \
+      -e 's|@''REPLACE_RAND''@|0|g' \
+      -e 's|@''REPLACE_RANDOM''@|0|g' \
+      -e 's|@''REPLACE_RANDOM_R''@|0|g' \
+      -e 's|@''REPLACE_REALLOC_FOR_REALLOC_POSIX''@|0|g' \
+      -e 's|@''REPLACE_REALLOCARRAY''@|0|g' \
+      -e 's|@''REPLACE_REALPATH''@|0|g' \
+      -e 's|@''REPLACE_SETENV''@|0|g' \
+      -e 's|@''REPLACE_SETSTATE''@|0|g' \
+      -e 's|@''REPLACE_STRTOD''@|0|g' \
+      -e 's|@''REPLACE_STRTOF''@|0|g' \
+      -e 's|@''REPLACE_STRTOL''@|0|g' \
+      -e 's|@''REPLACE_STRTOLD''@|0|g' \
+      -e 's|@''REPLACE_STRTOLL''@|0|g' \
+      -e 's|@''REPLACE_STRTOUL''@|0|g' \
+      -e 's|@''REPLACE_STRTOULL''@|0|g' \
+      -e 's|@''REPLACE_UNSETENV''@|0|g' \
+      -e 's|@''REPLACE_WCTOMB''@|0|g' \
+      -e 's|@''CAN_PRINT_STACK_TRACE''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r .././../src/v1.18-8006e03beb.clean/srclib/c++defs.h' \
+      -e '/definition of _Noreturn/r .././../src/v1.18-8006e03beb.clean/srclib/_Noreturn.h' \
+      -e '/definition of _GL_ARG_NONNULL/r .././../src/v1.18-8006e03beb.clean/srclib/arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r .././../src/v1.18-8006e03beb.clean/srclib/warn-on-use.h' \
+      < stdlib.h-t2 > stdlib.h-t3
+mv stdio.h-t3 stdio.h
+sed \
+      -e 's|@''HAVE_EXPLICIT_BZERO''@|1|g' \
+      -e 's|@''HAVE_FFSL''@|1|g' \
+      -e 's|@''HAVE_FFSLL''@|1|g' \
+      -e 's|@''HAVE_MBSLEN''@|0|g' \
+      -e 's|@''HAVE_DECL_MEMMEM''@|1|g' \
+      -e 's|@''HAVE_MEMPCPY''@|0|g' \
+      -e 's|@''HAVE_DECL_MEMRCHR''@|1|g' \
+      -e 's|@''HAVE_MEMSET_EXPLICIT''@|1|g' \
+      -e 's|@''HAVE_RAWMEMCHR''@|0|g' \
+      -e 's|@''HAVE_STPCPY''@|1|g' \
+      -e 's|@''HAVE_STPNCPY''@|1|g' \
+      -e 's|@''HAVE_STRCHRNUL''@|1|g' \
+      -e 's|@''HAVE_DECL_STRDUP''@|1|g' \
+      -e 's|@''HAVE_DECL_STRNDUP''@|1|g' \
+      -e 's|@''HAVE_DECL_STRNLEN''@|1|g' \
+      -e 's|@''HAVE_STRPBRK''@|1|g' \
+      -e 's|@''HAVE_STRSEP''@|1|g' \
+      -e 's|@''HAVE_STRCASESTR''@|1|g' \
+      -e 's|@''HAVE_DECL_STRTOK_R''@|1|g' \
+      -e 's|@''HAVE_DECL_STRERROR_R''@|1|g' \
+      -e 's|@''HAVE_STRERRORNAME_NP''@|1|g' \
+      -e 's|@''HAVE_SIGABBREV_NP''@|1|g' \
+      -e 's|@''HAVE_SIGDESCR_NP''@|1|g' \
+      -e 's|@''HAVE_DECL_STRSIGNAL''@|1|g' \
+      -e 's|@''HAVE_STRVERSCMP''@|1|g' \
+      -e 's|@''REPLACE_FFSLL''@|0|g' \
+      -e 's|@''REPLACE_MEMCHR''@|0|g' \
+      -e 's|@''REPLACE_MEMMEM''@|0|g' \
+      -e 's|@''REPLACE_MEMPCPY''@|0|g' \
+      -e 's|@''REPLACE_MEMSET_EXPLICIT''@|0|g' \
+      -e 's|@''REPLACE_FREE''@|1|g' \
+      -e 's|@''REPLACE_STPCPY''@|0|g' \
+      -e 's|@''REPLACE_STPNCPY''@|0|g' \
+      -e 's|@''REPLACE_STRCHRNUL''@|0|g' \
+      -e 's|@''REPLACE_STRDUP''@|0|g' \
+      -e 's|@''REPLACE_STRNCAT''@|0|g' \
+      -e 's|@''REPLACE_STRNDUP''@|0|g' \
+      -e 's|@''REPLACE_STRNLEN''@|0|g' \
+      -e 's|@''REPLACE_STRSTR''@|0|g' \
+      -e 's|@''REPLACE_STRCASESTR''@|0|g' \
+      -e 's|@''REPLACE_STRTOK_R''@|0|g' \
+      -e 's|@''REPLACE_STRERROR''@|1|g' \
+      -e 's|@''REPLACE_STRERROR_R''@|0|g' \
+      -e 's|@''REPLACE_STRERRORNAME_NP''@|0|g' \
+      -e 's|@''REPLACE_STRSIGNAL''@|0|g' \
+      -e 's|@''REPLACE_STRVERSCMP''@|0|g' \
+      -e 's|@''UNDEFINE_STRTOK_R''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r .././../src/v1.18-8006e03beb.clean/srclib/c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r .././../src/v1.18-8006e03beb.clean/srclib/arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r .././../src/v1.18-8006e03beb.clean/srclib/warn-on-use.h' \
+      < string.h-t1 > string.h-t2
+Makefile:2927: update target 'sys/types.h' due to: target does not exist
+/usr/bin/mkdir -p 'sys'
+rm -f stdlib.h-t1 stdlib.h-t2
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@||g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_SYS_TYPES_H''@|"C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\ucrt\\sys/types.h"|g' \
+      -e 's|@''WINDOWS_64_BIT_OFF_T''@|1|g' \
+      -e 's|@''HAVE_OFF64_T''@|0|g' \
+      -e 's|@''WINDOWS_STAT_INODES''@|0|g' \
+      .././../src/v1.18-8006e03beb.clean/srclib/sys_types.in.h > sys/types.h-t
+mv stdlib.h-t3 stdlib.h
+rm -f string.h-t1
+mv sys/types.h-t sys/types.h
+mv string.h-t2 string.h
+Makefile:2943: update target 'time.h' due to: target does not exist
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@||g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_TIME_H''@|"C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\ucrt\\time.h"|g' \
+      -e 's/@''GNULIB_CTIME''@/0/g' \
+      -e 's/@''GNULIB_LOCALTIME''@/0/g' \
+      -e 's/@''GNULIB_MKTIME''@/0/g' \
+      -e 's/@''GNULIB_NANOSLEEP''@/0/g' \
+      -e 's/@''GNULIB_STRFTIME''@/0/g' \
+      -e 's/@''GNULIB_STRPTIME''@/0/g' \
+      -e 's/@''GNULIB_TIME''@/0/g' \
+      -e 's/@''GNULIB_TIMEGM''@/0/g' \
+      -e 's/@''GNULIB_TIMESPEC_GET''@/0/g' \
+      -e 's/@''GNULIB_TIMESPEC_GETRES''@/0/g' \
+      -e 's/@''GNULIB_TIME_R''@/0/g' \
+      -e 's/@''GNULIB_TIME_RZ''@/0/g' \
+      -e 's/@''GNULIB_TZNAME''@/0/g' \
+      -e 's/@''GNULIB_TZSET''@/0/g' \
+      -e 's/@''GNULIB_MDA_TZSET''@/1/g' \
+      -e 's|@''HAVE_DECL_LOCALTIME_R''@|1|g' \
+      -e 's|@''HAVE_NANOSLEEP''@|1|g' \
+      -e 's|@''HAVE_STRPTIME''@|1|g' \
+      -e 's|@''HAVE_TIMEGM''@|1|g' \
+      -e 's|@''HAVE_TIMESPEC_GET''@|1|g' \
+      -e 's|@''HAVE_TIMESPEC_GETRES''@|1|g' \
+      -e 's|@''HAVE_TIMEZONE_T''@|0|g' \
+      -e 's|@''HAVE_TZALLOC''@|0|g' \
+      -e 's|@''REPLACE_CTIME''@|0|g' \
+      -e 's|@''REPLACE_GMTIME''@|0|g' \
+      -e 's|@''REPLACE_LOCALTIME''@|0|g' \
+      -e 's|@''REPLACE_LOCALTIME_R''@|0|g' \
+      -e 's|@''REPLACE_LOCALTIME_RZ''@|0|g' \
+      -e 's|@''REPLACE_MKTIME''@|0|g' \
+      -e 's|@''REPLACE_MKTIME_Z''@|0|g' \
+      -e 's|@''REPLACE_NANOSLEEP''@|0|g' \
+      -e 's|@''REPLACE_STRFTIME''@|0|g' \
+      -e 's|@''REPLACE_TIME''@|0|g' \
+      -e 's|@''REPLACE_TIMEGM''@|0|g' \
+      -e 's|@''REPLACE_TIMESPEC_GET''@|0|g' \
+      -e 's|@''REPLACE_TIMESPEC_GETRES''@|0|g' \
+      -e 's|@''REPLACE_TZSET''@|0|g' \
+      -e 's|@''PTHREAD_H_DEFINES_STRUCT_TIMESPEC''@|0|g' \
+      -e 's|@''SYS_TIME_H_DEFINES_STRUCT_TIMESPEC''@|0|g' \
+      -e 's|@''TIME_H_DEFINES_STRUCT_TIMESPEC''@|1|g' \
+      -e 's|@''UNISTD_H_DEFINES_STRUCT_TIMESPEC''@|0|g' \
+      -e 's|@''TIME_H_DEFINES_TIME_UTC''@|1|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r .././../src/v1.18-8006e03beb.clean/srclib/c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r .././../src/v1.18-8006e03beb.clean/srclib/arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r .././../src/v1.18-8006e03beb.clean/srclib/warn-on-use.h' \
+      .././../src/v1.18-8006e03beb.clean/srclib/time.in.h > time.h-t
+mv time.h-t time.h
+Makefile:3000: update target 'unistd.h' due to: target does not exist
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''HAVE_UNISTD_H''@|0|g' \
+      -e 's|@''INCLUDE_NEXT''@|include|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@||g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_UNISTD_H''@|<unistd.h>|g' \
+      -e 's|@''WINDOWS_64_BIT_OFF_T''@|1|g' \
+      -e 's/@''GNULIB_ACCESS''@/0/g' \
+      -e 's/@''GNULIB_CHDIR''@/0/g' \
+      -e 's/@''GNULIB_CHOWN''@/0/g' \
+      -e 's/@''GNULIB_CLOSE''@/1/g' \
+      -e 's/@''GNULIB_COPY_FILE_RANGE''@/0/g' \
+      -e 's/@''GNULIB_DUP''@/0/g' \
+      -e 's/@''GNULIB_DUP2''@/1/g' \
+      -e 's/@''GNULIB_DUP3''@/0/g' \
+      -e 's/@''GNULIB_ENVIRON''@/1/g' \
+      -e 's/@''GNULIB_EUIDACCESS''@/0/g' \
+      -e 's/@''GNULIB_EXECL''@/0/g' \
+      -e 's/@''GNULIB_EXECLE''@/0/g' \
+      -e 's/@''GNULIB_EXECLP''@/0/g' \
+      -e 's/@''GNULIB_EXECV''@/0/g' \
+      -e 's/@''GNULIB_EXECVE''@/0/g' \
+      -e 's/@''GNULIB_EXECVP''@/0/g' \
+      -e 's/@''GNULIB_EXECVPE''@/0/g' \
+      -e 's/@''GNULIB_FACCESSAT''@/0/g' \
+      -e 's/@''GNULIB_FCHDIR''@/0/g' \
+      -e 's/@''GNULIB_FCHOWNAT''@/0/g' \
+      -e 's/@''GNULIB_FDATASYNC''@/0/g' \
+      -e 's/@''GNULIB_FSYNC''@/0/g' \
+      -e 's/@''GNULIB_FTRUNCATE''@/0/g' \
+      < .././../src/v1.18-8006e03beb.clean/srclib/unistd.in.h > unistd.h-t1
+sed \
+      -e 's/@''GNULIB_GETCWD''@/0/g' \
+      -e 's/@''GNULIB_GETDOMAINNAME''@/0/g' \
+      -e 's/@''GNULIB_GETDTABLESIZE''@/1/g' \
+      -e 's/@''GNULIB_GETENTROPY''@/0/g' \
+      -e 's/@''GNULIB_GETGROUPS''@/0/g' \
+      -e 's/@''GNULIB_GETHOSTNAME''@/0/g' \
+      -e 's/@''GNULIB_GETLOGIN''@/0/g' \
+      -e 's/@''GNULIB_GETLOGIN_R''@/0/g' \
+      -e 's/@''GNULIB_GETOPT_POSIX''@/0/g' \
+      -e 's/@''GNULIB_GETPAGESIZE''@/0/g' \
+      -e 's/@''GNULIB_GETPASS''@/0/g' \
+      -e 's/@''GNULIB_GETPASS_GNU''@/0/g' \
+      -e 's/@''GNULIB_GETUSERSHELL''@/0/g' \
+      -e 's/@''GNULIB_GROUP_MEMBER''@/0/g' \
+      -e 's/@''GNULIB_ISATTY''@/0/g' \
+      -e 's/@''GNULIB_LCHOWN''@/0/g' \
+      -e 's/@''GNULIB_LINK''@/0/g' \
+      -e 's/@''GNULIB_LINKAT''@/0/g' \
+      -e 's/@''GNULIB_LSEEK''@/0/g' \
+      -e 's/@''GNULIB_PIPE''@/0/g' \
+      -e 's/@''GNULIB_PIPE2''@/0/g' \
+      -e 's/@''GNULIB_PREAD''@/0/g' \
+      -e 's/@''GNULIB_PWRITE''@/0/g' \
+      -e 's/@''GNULIB_READ''@/1/g' \
+      -e 's/@''GNULIB_READLINK''@/1/g' \
+      -e 's/@''GNULIB_READLINKAT''@/0/g' \
+      -e 's/@''GNULIB_RMDIR''@/0/g' \
+      -e 's/@''GNULIB_SETHOSTNAME''@/0/g' \
+      -e 's/@''GNULIB_SLEEP''@/0/g' \
+      -e 's/@''GNULIB_SYMLINK''@/0/g' \
+      -e 's/@''GNULIB_SYMLINKAT''@/0/g' \
+      -e 's/@''GNULIB_TRUNCATE''@/0/g' \
+      -e 's/@''GNULIB_TTYNAME_R''@/0/g' \
+      -e 's/@''GNULIB_UNISTD_H_GETOPT''@/00/g' \
+      -e 's/@''GNULIB_UNISTD_H_NONBLOCKING''@/0/g' \
+      -e 's/@''GNULIB_UNISTD_H_SIGPIPE''@/1/g' \
+      -e 's/@''GNULIB_UNLINK''@/0/g' \
+      -e 's/@''GNULIB_UNLINKAT''@/0/g' \
+      -e 's/@''GNULIB_USLEEP''@/0/g' \
+      -e 's/@''GNULIB_WRITE''@/0/g' \
+      -e 's/@''GNULIB_MDA_ACCESS''@/1/g' \
+      -e 's/@''GNULIB_MDA_CHDIR''@/1/g' \
+      -e 's/@''GNULIB_MDA_CLOSE''@/1/g' \
+      -e 's/@''GNULIB_MDA_DUP''@/1/g' \
+      -e 's/@''GNULIB_MDA_DUP2''@/1/g' \
+      -e 's/@''GNULIB_MDA_EXECL''@/1/g' \
+      -e 's/@''GNULIB_MDA_EXECLE''@/1/g' \
+      -e 's/@''GNULIB_MDA_EXECLP''@/1/g' \
+      -e 's/@''GNULIB_MDA_EXECV''@/1/g' \
+      -e 's/@''GNULIB_MDA_EXECVE''@/1/g' \
+      -e 's/@''GNULIB_MDA_EXECVP''@/1/g' \
+      -e 's/@''GNULIB_MDA_EXECVPE''@/1/g' \
+      -e 's/@''GNULIB_MDA_GETCWD''@/1/g' \
+      -e 's/@''GNULIB_MDA_GETPID''@/1/g' \
+      -e 's/@''GNULIB_MDA_ISATTY''@/1/g' \
+      -e 's/@''GNULIB_MDA_LSEEK''@/1/g' \
+      -e 's/@''GNULIB_MDA_READ''@/1/g' \
+      -e 's/@''GNULIB_MDA_RMDIR''@/1/g' \
+      -e 's/@''GNULIB_MDA_SWAB''@/1/g' \
+      -e 's/@''GNULIB_MDA_UNLINK''@/1/g' \
+      -e 's/@''GNULIB_MDA_WRITE''@/1/g' \
+      < unistd.h-t1 > unistd.h-t2
+Makefile:3207: update target 'unitypes.h' due to: target does not exist
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G -n -e 'w unitypes.h-t' .././../src/v1.18-8006e03beb.clean/srclib/unitypes.in.h
+mv unitypes.h-t unitypes.h
+Makefile:3211: update target 'uniwidth.h' due to: target does not exist
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G -n -e 'w uniwidth.h-t' .././../src/v1.18-8006e03beb.clean/srclib/uniwidth.in.h
+sed \
+      -e 's|@''HAVE_CHOWN''@|1|g' \
+      -e 's|@''HAVE_COPY_FILE_RANGE''@|1|g' \
+      -e 's|@''HAVE_DUP3''@|1|g' \
+      -e 's|@''HAVE_EUIDACCESS''@|1|g' \
+      -e 's|@''HAVE_EXECVPE''@|1|g' \
+      -e 's|@''HAVE_FACCESSAT''@|1|g' \
+      -e 's|@''HAVE_FCHDIR''@|1|g' \
+      -e 's|@''HAVE_FCHOWNAT''@|1|g' \
+      -e 's|@''HAVE_FDATASYNC''@|1|g' \
+      -e 's|@''HAVE_FSYNC''@|1|g' \
+      -e 's|@''HAVE_FTRUNCATE''@|1|g' \
+      -e 's|@''HAVE_GETDTABLESIZE''@|0|g' \
+      -e 's|@''HAVE_GETENTROPY''@|1|g' \
+      -e 's|@''HAVE_GETGROUPS''@|1|g' \
+      -e 's|@''HAVE_GETHOSTNAME''@|1|g' \
+      -e 's|@''HAVE_GETPAGESIZE''@|1|g' \
+      -e 's|@''HAVE_GETPASS''@|1|g' \
+      -e 's|@''HAVE_GROUP_MEMBER''@|1|g' \
+      -e 's|@''HAVE_LCHOWN''@|1|g' \
+      -e 's|@''HAVE_LINK''@|1|g' \
+      -e 's|@''HAVE_LINKAT''@|1|g' \
+      -e 's|@''HAVE_PIPE''@|1|g' \
+      -e 's|@''HAVE_PIPE2''@|1|g' \
+      -e 's|@''HAVE_PREAD''@|1|g' \
+      -e 's|@''HAVE_PWRITE''@|1|g' \
+      -e 's|@''HAVE_READLINK''@|0|g' \
+      -e 's|@''HAVE_READLINKAT''@|1|g' \
+      -e 's|@''HAVE_SETHOSTNAME''@|1|g' \
+      -e 's|@''HAVE_SLEEP''@|1|g' \
+      -e 's|@''HAVE_SYMLINK''@|1|g' \
+      -e 's|@''HAVE_SYMLINKAT''@|1|g' \
+      -e 's|@''HAVE_UNLINKAT''@|1|g' \
+      -e 's|@''HAVE_USLEEP''@|1|g' \
+      -e 's|@''HAVE_DECL_ENVIRON''@|1|g' \
+      -e 's|@''HAVE_DECL_EXECVPE''@|0|g' \
+      -e 's|@''HAVE_DECL_FCHDIR''@|1|g' \
+      -e 's|@''HAVE_DECL_FDATASYNC''@|1|g' \
+      -e 's|@''HAVE_DECL_GETDOMAINNAME''@|1|g' \
+      -e 's|@''HAVE_DECL_GETLOGIN''@|1|g' \
+      -e 's|@''HAVE_DECL_GETLOGIN_R''@|1|g' \
+      -e 's|@''HAVE_DECL_GETPAGESIZE''@|1|g' \
+      -e 's|@''HAVE_DECL_GETUSERSHELL''@|1|g' \
+      -e 's|@''HAVE_DECL_SETHOSTNAME''@|1|g' \
+      -e 's|@''HAVE_DECL_TRUNCATE''@|1|g' \
+      -e 's|@''HAVE_DECL_TTYNAME_R''@|1|g' \
+      -e 's|@''HAVE_OS_H''@|0|g' \
+      -e 's|@''HAVE_SYS_PARAM_H''@|0|g' \
+      < unistd.h-t2 > unistd.h-t3
+mv uniwidth.h-t uniwidth.h
+Makefile:3217: update target 'wchar.h' due to: target does not exist
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@||g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''HAVE_FEATURES_H''@|0|g' \
+      -e 's|@''NEXT_WCHAR_H''@|"C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\ucrt\\wchar.h"|g' \
+      -e 's|@''HAVE_WCHAR_H''@|1|g' \
+      -e 's/@''HAVE_CRTDEFS_H''@/1/g' \
+      -e 's/@''GNULIBHEADERS_OVERRIDE_WINT_T''@/1/g' \
+      -e 's/@''GNULIB_BTOWC''@/0/g' \
+      -e 's/@''GNULIB_WCTOB''@/0/g' \
+      -e 's/@''GNULIB_MBSINIT''@/0/g' \
+      -e 's/@''GNULIB_MBSZERO''@/0/g' \
+      -e 's/@''GNULIB_MBRTOWC''@/0/g' \
+      -e 's/@''GNULIB_MBRLEN''@/0/g' \
+      -e 's/@''GNULIB_MBSRTOWCS''@/0/g' \
+      -e 's/@''GNULIB_MBSNRTOWCS''@/0/g' \
+      -e 's/@''GNULIB_WCRTOMB''@/0/g' \
+      -e 's/@''GNULIB_WCSRTOMBS''@/0/g' \
+      -e 's/@''GNULIB_WCSNRTOMBS''@/0/g' \
+      -e 's/@''GNULIB_WCWIDTH''@/0/g' \
+      -e 's/@''GNULIB_WMEMCHR''@/0/g' \
+      -e 's/@''GNULIB_WMEMCMP''@/0/g' \
+      -e 's/@''GNULIB_WMEMCPY''@/0/g' \
+      -e 's/@''GNULIB_WMEMMOVE''@/0/g' \
+      -e 's/@''GNULIB_WMEMPCPY''@/0/g' \
+      -e 's/@''GNULIB_WMEMSET''@/0/g' \
+      -e 's/@''GNULIB_WCSLEN''@/0/g' \
+      -e 's/@''GNULIB_WCSNLEN''@/0/g' \
+      -e 's/@''GNULIB_WCSCPY''@/0/g' \
+      -e 's/@''GNULIB_WCPCPY''@/0/g' \
+      -e 's/@''GNULIB_WCSNCPY''@/0/g' \
+      -e 's/@''GNULIB_WCPNCPY''@/0/g' \
+      -e 's/@''GNULIB_WCSCAT''@/0/g' \
+      -e 's/@''GNULIB_WCSNCAT''@/0/g' \
+      -e 's/@''GNULIB_WCSCMP''@/0/g' \
+      -e 's/@''GNULIB_WCSNCMP''@/0/g' \
+      -e 's/@''GNULIB_WCSCASECMP''@/0/g' \
+      -e 's/@''GNULIB_WCSNCASECMP''@/0/g' \
+      -e 's/@''GNULIB_WCSCOLL''@/0/g' \
+      -e 's/@''GNULIB_WCSXFRM''@/0/g' \
+      -e 's/@''GNULIB_WCSDUP''@/0/g' \
+      -e 's/@''GNULIB_WCSCHR''@/0/g' \
+      -e 's/@''GNULIB_WCSRCHR''@/0/g' \
+      -e 's/@''GNULIB_WCSCSPN''@/0/g' \
+      -e 's/@''GNULIB_WCSSPN''@/0/g' \
+      -e 's/@''GNULIB_WCSPBRK''@/0/g' \
+      -e 's/@''GNULIB_WCSSTR''@/0/g' \
+      -e 's/@''GNULIB_WCSTOK''@/0/g' \
+      -e 's/@''GNULIB_WCSWIDTH''@/0/g' \
+      -e 's/@''GNULIB_WCSFTIME''@/0/g' \
+      -e 's/@''GNULIB_WGETCWD''@/0/g' \
+      -e 's/@''GNULIB_MDA_WCSDUP''@/1/g' \
+      -e 's/@''GNULIB_FREE_POSIX''@/1/g' \
+      < .././../src/v1.18-8006e03beb.clean/srclib/wchar.in.h > wchar.h-t1
+sed \
+      -e 's|@''REPLACE_ACCESS''@|0|g' \
+      -e 's|@''REPLACE_CHOWN''@|0|g' \
+      -e 's|@''REPLACE_CLOSE''@|1|g' \
+      -e 's|@''REPLACE_COPY_FILE_RANGE''@|0|g' \
+      -e 's|@''REPLACE_DUP''@|0|g' \
+      -e 's|@''REPLACE_DUP2''@|1|g' \
+      -e 's|@''REPLACE_DUP3''@|0|g' \
+      -e 's|@''REPLACE_EXECL''@|0|g' \
+      -e 's|@''REPLACE_EXECLE''@|0|g' \
+      -e 's|@''REPLACE_EXECLP''@|0|g' \
+      -e 's|@''REPLACE_EXECV''@|0|g' \
+      -e 's|@''REPLACE_EXECVE''@|0|g' \
+      -e 's|@''REPLACE_EXECVP''@|0|g' \
+      -e 's|@''REPLACE_EXECVPE''@|0|g' \
+      -e 's|@''REPLACE_FACCESSAT''@|0|g' \
+      -e 's|@''REPLACE_FCHDIR''@|0|g' \
+      -e 's|@''REPLACE_FCHOWNAT''@|0|g' \
+      -e 's|@''REPLACE_FDATASYNC''@|0|g' \
+      -e 's|@''REPLACE_FTRUNCATE''@|0|g' \
+      -e 's|@''REPLACE_GETCWD''@|0|g' \
+      -e 's|@''REPLACE_GETDOMAINNAME''@|0|g' \
+      -e 's|@''REPLACE_GETDTABLESIZE''@|0|g' \
+      -e 's|@''REPLACE_GETENTROPY''@|0|g' \
+      -e 's|@''REPLACE_GETLOGIN_R''@|0|g' \
+      -e 's|@''REPLACE_GETGROUPS''@|0|g' \
+      -e 's|@''REPLACE_GETPAGESIZE''@|0|g' \
+      -e 's|@''REPLACE_GETPASS''@|0|g' \
+      -e 's|@''REPLACE_GETPASS_FOR_GETPASS_GNU''@|0|g' \
+      -e 's|@''REPLACE_GETUSERSHELL''@|0|g' \
+      -e 's|@''REPLACE_ISATTY''@|0|g' \
+      -e 's|@''REPLACE_LCHOWN''@|0|g' \
+      -e 's|@''REPLACE_LINK''@|0|g' \
+      -e 's|@''REPLACE_LINKAT''@|0|g' \
+      -e 's|@''REPLACE_LSEEK''@|0|g' \
+      -e 's|@''REPLACE_PIPE2''@|0|g' \
+      -e 's|@''REPLACE_PREAD''@|0|g' \
+      -e 's|@''REPLACE_PWRITE''@|0|g' \
+      -e 's|@''REPLACE_READ''@|1|g' \
+      -e 's|@''REPLACE_READLINK''@|0|g' \
+      -e 's|@''REPLACE_READLINKAT''@|0|g' \
+      -e 's|@''REPLACE_RMDIR''@|0|g' \
+      -e 's|@''REPLACE_SETHOSTNAME''@|0|g' \
+      -e 's|@''REPLACE_SLEEP''@|0|g' \
+      -e 's|@''REPLACE_SYMLINK''@|0|g' \
+      -e 's|@''REPLACE_SYMLINKAT''@|0|g' \
+      -e 's|@''REPLACE_TRUNCATE''@|0|g' \
+      -e 's|@''REPLACE_TTYNAME_R''@|0|g' \
+      -e 's|@''REPLACE_UNLINK''@|0|g' \
+      -e 's|@''REPLACE_UNLINKAT''@|0|g' \
+      -e 's|@''REPLACE_USLEEP''@|0|g' \
+      -e 's|@''REPLACE_WRITE''@|0|g' \
+      -e 's|@''UNISTD_H_HAVE_SYS_RANDOM_H''@|0|g' \
+      -e 's|@''UNISTD_H_HAVE_WINSOCK2_H''@|1|g' \
+      -e 's|@''UNISTD_H_HAVE_WINSOCK2_H_AND_USE_SOCKETS''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r .././../src/v1.18-8006e03beb.clean/srclib/c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r .././../src/v1.18-8006e03beb.clean/srclib/arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r .././../src/v1.18-8006e03beb.clean/srclib/warn-on-use.h' \
+      < unistd.h-t3 > unistd.h-t4
+sed \
+      -e 's|@''HAVE_WINT_T''@|1|g' \
+      -e 's|@''HAVE_BTOWC''@|1|g' \
+      -e 's|@''HAVE_MBSINIT''@|1|g' \
+      -e 's|@''HAVE_MBRTOWC''@|1|g' \
+      -e 's|@''HAVE_MBRLEN''@|1|g' \
+      -e 's|@''HAVE_MBSRTOWCS''@|1|g' \
+      -e 's|@''HAVE_MBSNRTOWCS''@|1|g' \
+      -e 's|@''HAVE_WCRTOMB''@|1|g' \
+      -e 's|@''HAVE_WCSRTOMBS''@|1|g' \
+      -e 's|@''HAVE_WCSNRTOMBS''@|1|g' \
+      -e 's|@''HAVE_WMEMCHR''@|1|g' \
+      -e 's|@''HAVE_WMEMCMP''@|1|g' \
+      -e 's|@''HAVE_WMEMCPY''@|1|g' \
+      -e 's|@''HAVE_WMEMMOVE''@|1|g' \
+      -e 's|@''HAVE_WMEMPCPY''@|1|g' \
+      -e 's|@''HAVE_WMEMSET''@|1|g' \
+      -e 's|@''HAVE_WCSLEN''@|1|g' \
+      -e 's|@''HAVE_WCSNLEN''@|1|g' \
+      -e 's|@''HAVE_WCSCPY''@|1|g' \
+      -e 's|@''HAVE_WCPCPY''@|1|g' \
+      -e 's|@''HAVE_WCSNCPY''@|1|g' \
+      -e 's|@''HAVE_WCPNCPY''@|1|g' \
+      -e 's|@''HAVE_WCSCAT''@|1|g' \
+      -e 's|@''HAVE_WCSNCAT''@|1|g' \
+      -e 's|@''HAVE_WCSCMP''@|1|g' \
+      -e 's|@''HAVE_WCSNCMP''@|1|g' \
+      -e 's|@''HAVE_WCSCASECMP''@|1|g' \
+      -e 's|@''HAVE_WCSNCASECMP''@|1|g' \
+      -e 's|@''HAVE_WCSCOLL''@|1|g' \
+      -e 's|@''HAVE_WCSXFRM''@|1|g' \
+      -e 's|@''HAVE_WCSDUP''@|1|g' \
+      -e 's|@''HAVE_WCSCHR''@|1|g' \
+      -e 's|@''HAVE_WCSRCHR''@|1|g' \
+      -e 's|@''HAVE_WCSCSPN''@|1|g' \
+      -e 's|@''HAVE_WCSSPN''@|1|g' \
+      -e 's|@''HAVE_WCSPBRK''@|1|g' \
+      -e 's|@''HAVE_WCSSTR''@|1|g' \
+      -e 's|@''HAVE_WCSTOK''@|1|g' \
+      -e 's|@''HAVE_WCSWIDTH''@|1|g' \
+      -e 's|@''HAVE_WCSFTIME''@|1|g' \
+      -e 's|@''HAVE_DECL_WCTOB''@|1|g' \
+      -e 's|@''HAVE_DECL_WCSDUP''@|1|g' \
+      -e 's|@''HAVE_DECL_WCWIDTH''@|1|g' \
+      < wchar.h-t1 > wchar.h-t2
+rm -f unistd.h-t1 unistd.h-t2 unistd.h-t3
+mv unistd.h-t4 unistd.h
+sed \
+      -e 's|@''REPLACE_MBSTATE_T''@|0|g' \
+      -e 's|@''REPLACE_BTOWC''@|0|g' \
+      -e 's|@''REPLACE_WCTOB''@|0|g' \
+      -e 's|@''REPLACE_FREE''@|1|g' \
+      -e 's|@''REPLACE_MBSINIT''@|0|g' \
+      -e 's|@''REPLACE_MBRTOWC''@|0|g' \
+      -e 's|@''REPLACE_MBRLEN''@|0|g' \
+      -e 's|@''REPLACE_MBSRTOWCS''@|0|g' \
+      -e 's|@''REPLACE_MBSNRTOWCS''@|0|g' \
+      -e 's|@''REPLACE_WCRTOMB''@|0|g' \
+      -e 's|@''REPLACE_WCSRTOMBS''@|0|g' \
+      -e 's|@''REPLACE_WCSNRTOMBS''@|0|g' \
+      -e 's|@''REPLACE_WCWIDTH''@|0|g' \
+      -e 's|@''REPLACE_WCSWIDTH''@|0|g' \
+      -e 's|@''REPLACE_WCSFTIME''@|0|g' \
+      -e 's|@''REPLACE_WCSCMP''@|0|g' \
+      -e 's|@''REPLACE_WCSNCAT''@|0|g' \
+      -e 's|@''REPLACE_WCSNCMP''@|0|g' \
+      -e 's|@''REPLACE_WCSSTR''@|0|g' \
+      -e 's|@''REPLACE_WCSTOK''@|0|g' \
+      -e 's|@''REPLACE_WMEMCMP''@|0|g' \
+      -e 's|@''REPLACE_WMEMPCPY''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r .././../src/v1.18-8006e03beb.clean/srclib/c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r .././../src/v1.18-8006e03beb.clean/srclib/arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r .././../src/v1.18-8006e03beb.clean/srclib/warn-on-use.h' \
+      < wchar.h-t2 > wchar.h-t3
+rm -f wchar.h-t1 wchar.h-t2
+mv wchar.h-t3 wchar.h
+Makefile:1600: update target 'all' due to: target is .PHONY
+/usr/bin/make  all-am
+make[2]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/srclib'
+cd .. && /usr/bin/make  am--refresh
+make[3]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg'
+make[3]: Nothing to be done for 'am--refresh'.
+make[3]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg'
+cd .. && /usr/bin/make  am--refresh
+make[3]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg'
+make[3]: Nothing to be done for 'am--refresh'.
+make[3]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg'
+make[3]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg'
+make[3]: Nothing to be done for 'am--refresh'.
+make[3]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg'
+Makefile:1677: update target 'libicrt_a-allocator.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-allocator.obj `if test -f 'allocator.c'; then cygpath -w 'allocator.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/allocator.c'; fi`
+Makefile:1683: update target 'libicrt_a-areadlink.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-areadlink.obj `if test -f 'areadlink.c'; then cygpath -w 'areadlink.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/areadlink.c'; fi`
+Makefile:1689: update target 'libicrt_a-basename-lgpl.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-basename-lgpl.obj `if test -f 'basename-lgpl.c'; then cygpath -w 'basename-lgpl.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/basename-lgpl.c'; fi`
+allocator.c
+Makefile:1695: update target 'libicrt_a-binary-io.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-binary-io.obj `if test -f 'binary-io.c'; then cygpath -w 'binary-io.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/binary-io.c'; fi`
+Makefile:1701: update target 'libicrt_a-canonicalize-lgpl.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-canonicalize-lgpl.obj `if test -f 'canonicalize-lgpl.c'; then cygpath -w 'canonicalize-lgpl.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/canonicalize-lgpl.c'; fi`
+Makefile:1707: update target 'libicrt_a-careadlinkat.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-careadlinkat.obj `if test -f 'careadlinkat.c'; then cygpath -w 'careadlinkat.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/careadlinkat.c'; fi`
+areadlink.c
+Makefile:1713: update target 'libicrt_a-cloexec.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-cloexec.obj `if test -f 'cloexec.c'; then cygpath -w 'cloexec.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/cloexec.c'; fi`
+Makefile:1719: update target 'libicrt_a-close.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-close.obj `if test -f 'close.c'; then cygpath -w 'close.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/close.c'; fi`
+binary-io.c
+basename-lgpl.c
+Makefile:1725: update target 'libicrt_a-dup2.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-dup2.obj `if test -f 'dup2.c'; then cygpath -w 'dup2.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/dup2.c'; fi`
+canonicalize-lgpl.c
+Makefile:1731: update target 'libicrt_a-error.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-error.obj `if test -f 'error.c'; then cygpath -w 'error.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/error.c'; fi`
+careadlinkat.c
+cloexec.c
+Makefile:1737: update target 'libicrt_a-fcntl.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-fcntl.obj `if test -f 'fcntl.c'; then cygpath -w 'fcntl.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/fcntl.c'; fi`
+Makefile:1743: update target 'libicrt_a-fd-hook.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-fd-hook.obj `if test -f 'fd-hook.c'; then cygpath -w 'fd-hook.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/fd-hook.c'; fi`
+close.c
+dup2.c
+Makefile:1749: update target 'libicrt_a-free.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-free.obj `if test -f 'free.c'; then cygpath -w 'free.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/free.c'; fi`
+Makefile:1755: update target 'libicrt_a-fstat.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-fstat.obj `if test -f 'fstat.c'; then cygpath -w 'fstat.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/fstat.c'; fi`
+Makefile:1761: update target 'libicrt_a-getdtablesize.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-getdtablesize.obj `if test -f 'getdtablesize.c'; then cygpath -w 'getdtablesize.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/getdtablesize.c'; fi`
+fcntl.c
+error.c
+Makefile:1767: update target 'libicrt_a-getprogname.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-getprogname.obj `if test -f 'getprogname.c'; then cygpath -w 'getprogname.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/getprogname.c'; fi`
+Makefile:1638: update target 'malloc/.dirstamp' due to: target does not exist
+/usr/bin/mkdir -p malloc
+fd-hook.c
+free.c
+fstat.c
+: >>malloc/.dirstamp
+Makefile:1791: update target 'libicrt_a-malloca.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-malloca.obj `if test -f 'malloca.c'; then cygpath -w 'malloca.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/malloca.c'; fi`
+Makefile:1797: update target 'libicrt_a-mempcpy.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-mempcpy.obj `if test -f 'mempcpy.c'; then cygpath -w 'mempcpy.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/mempcpy.c'; fi`
+getdtablesize.c
+Makefile:1803: update target 'libicrt_a-msvc-inval.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-msvc-inval.obj `if test -f 'msvc-inval.c'; then cygpath -w 'msvc-inval.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/msvc-inval.c'; fi`
+getprogname.c
+Makefile:1809: update target 'libicrt_a-msvc-nothrow.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-msvc-nothrow.obj `if test -f 'msvc-nothrow.c'; then cygpath -w 'msvc-nothrow.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/msvc-nothrow.c'; fi`
+Makefile:1815: update target 'libicrt_a-open.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-open.obj `if test -f 'open.c'; then cygpath -w 'open.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/open.c'; fi`
+malloca.c
+Makefile:1821: update target 'libicrt_a-progname.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-progname.obj `if test -f 'progname.c'; then cygpath -w 'progname.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/progname.c'; fi`
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\srclib\malloca.h(137): warning C4116: unnamed type definition in parentheses
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\srclib\malloca.h(138): warning C4116: unnamed type definition in parentheses
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\srclib\malloca.h(139): warning C4116: unnamed type definition in parentheses
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\srclib\malloca.h(140): warning C4116: unnamed type definition in parentheses
+msvc-inval.c
+Makefile:1827: update target 'libicrt_a-raise.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-raise.obj `if test -f 'raise.c'; then cygpath -w 'raise.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/raise.c'; fi`
+Makefile:1833: update target 'libicrt_a-rawmemchr.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-rawmemchr.obj `if test -f 'rawmemchr.c'; then cygpath -w 'rawmemchr.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/rawmemchr.c'; fi`
+mempcpy.c
+msvc-nothrow.c
+open.c
+Makefile:1839: update target 'libicrt_a-read.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-read.obj `if test -f 'read.c'; then cygpath -w 'read.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/read.c'; fi`
+Makefile:1845: update target 'libicrt_a-readlink.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-readlink.obj `if test -f 'readlink.c'; then cygpath -w 'readlink.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/readlink.c'; fi`
+raise.c
+progname.c
+Makefile:1851: update target 'libicrt_a-realloc.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-realloc.obj `if test -f 'realloc.c'; then cygpath -w 'realloc.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/realloc.c'; fi`
+rawmemchr.c
+Makefile:1857: update target 'libicrt_a-progreloc.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-progreloc.obj `if test -f 'progreloc.c'; then cygpath -w 'progreloc.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/progreloc.c'; fi`
+Makefile:1863: update target 'libicrt_a-safe-read.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-safe-read.obj `if test -f 'safe-read.c'; then cygpath -w 'safe-read.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/safe-read.c'; fi`
+read.c
+Makefile:1869: update target 'libicrt_a-sigprocmask.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-sigprocmask.obj `if test -f 'sigprocmask.c'; then cygpath -w 'sigprocmask.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/sigprocmask.c'; fi`
+readlink.c
+Makefile:1875: update target 'libicrt_a-stat.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-stat.obj `if test -f 'stat.c'; then cygpath -w 'stat.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/stat.c'; fi`
+Makefile:1881: update target 'libicrt_a-stat-time.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-stat-time.obj `if test -f 'stat-time.c'; then cygpath -w 'stat-time.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/stat-time.c'; fi`
+progreloc.c
+realloc.c
+safe-read.c
+Makefile:1893: update target 'libicrt_a-stdio-write.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-stdio-write.obj `if test -f 'stdio-write.c'; then cygpath -w 'stdio-write.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/stdio-write.c'; fi`
+Makefile:1899: update target 'libicrt_a-stdlib.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-stdlib.obj `if test -f 'stdlib.c'; then cygpath -w 'stdlib.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/stdlib.c'; fi`
+Makefile:1905: update target 'libicrt_a-strerror.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-strerror.obj `if test -f 'strerror.c'; then cygpath -w 'strerror.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/strerror.c'; fi`
+stat.c
+sigprocmask.c
+stat-time.c
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\srclib\malloca.h(137): warning C4116: unnamed type definition in parentheses
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\srclib\malloca.h(138): warning C4116: unnamed type definition in parentheses
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\srclib\malloca.h(139): warning C4116: unnamed type definition in parentheses
+D:\ReposGitHub\nLARN\vcpkg_installed\vcpkg\blds\libiconv\src\v1.18-8006e03beb.clean\srclib\malloca.h(140): warning C4116: unnamed type definition in parentheses
+Makefile:1911: update target 'libicrt_a-strerror-override.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-strerror-override.obj `if test -f 'strerror-override.c'; then cygpath -w 'strerror-override.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/strerror-override.c'; fi`
+Makefile:1917: update target 'libicrt_a-unistd.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-unistd.obj `if test -f 'unistd.c'; then cygpath -w 'unistd.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/unistd.c'; fi`
+Makefile:1647: update target 'uniwidth/.dirstamp' due to: target does not exist
+/usr/bin/mkdir -p uniwidth
+stdio-write.c
+stdlib.c
+: >>uniwidth/.dirstamp
+Makefile:1929: update target 'libicrt_a-xmalloc.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-xmalloc.obj `if test -f 'xmalloc.c'; then cygpath -w 'xmalloc.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/xmalloc.c'; fi`
+Makefile:1935: update target 'libicrt_a-xstrdup.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-xstrdup.obj `if test -f 'xstrdup.c'; then cygpath -w 'xstrdup.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/xstrdup.c'; fi`
+strerror.c
+unistd.c
+strerror-override.c
+Makefile:1941: update target 'libicrt_a-xreadlink.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o libicrt_a-xreadlink.obj `if test -f 'xreadlink.c'; then cygpath -w 'xreadlink.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/xreadlink.c'; fi`
+Makefile:1668: update target 'relocatable.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS  -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o relocatable.obj `cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/relocatable.c'`
+Makefile:1668: update target 'stat-w32.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS  -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o stat-w32.obj `cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/stat-w32.c'`
+xmalloc.c
+xstrdup.c
+xreadlink.c
+relocatable.c
+stat-w32.c
+Makefile:1773: update target 'malloc/libicrt_a-scratch_buffer_grow.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o malloc/libicrt_a-scratch_buffer_grow.obj `if test -f 'malloc/scratch_buffer_grow.c'; then cygpath -w 'malloc/scratch_buffer_grow.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/malloc/scratch_buffer_grow.c'; fi`
+Makefile:1779: update target 'malloc/libicrt_a-scratch_buffer_grow_preserve.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o malloc/libicrt_a-scratch_buffer_grow_preserve.obj `if test -f 'malloc/scratch_buffer_grow_preserve.c'; then cygpath -w 'malloc/scratch_buffer_grow_preserve.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/malloc/scratch_buffer_grow_preserve.c'; fi`
+Makefile:1785: update target 'malloc/libicrt_a-scratch_buffer_set_array_size.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o malloc/libicrt_a-scratch_buffer_set_array_size.obj `if test -f 'malloc/scratch_buffer_set_array_size.c'; then cygpath -w 'malloc/scratch_buffer_set_array_size.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/malloc/scratch_buffer_set_array_size.c'; fi`
+scratch_buffer_grow_preserve.c
+scratch_buffer_set_array_size.c
+scratch_buffer_grow.c
+Makefile:1923: update target 'uniwidth/libicrt_a-width.obj' due to: target does not exist
+compile cl.exe -DHAVE_CONFIG_H -DEXEEXT=\".exe\" -I. -I.././../src/v1.18-8006e03beb.clean/srclib -I.. -I../lib  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1 -DWIN32 -D_WINDOWS   -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -c -o uniwidth/libicrt_a-width.obj `if test -f 'uniwidth/width.c'; then cygpath -w 'uniwidth/width.c'; else cygpath -w '.././../src/v1.18-8006e03beb.clean/srclib/uniwidth/width.c'; fi`
+width.c
+Makefile:1652: update target 'libicrt.a' due to: target does not exist
+rm -f libicrt.a
+ar-lib lib.exe cr libicrt.a libicrt_a-allocator.obj libicrt_a-areadlink.obj libicrt_a-basename-lgpl.obj libicrt_a-binary-io.obj libicrt_a-canonicalize-lgpl.obj libicrt_a-careadlinkat.obj libicrt_a-cloexec.obj libicrt_a-close.obj libicrt_a-dup2.obj libicrt_a-error.obj libicrt_a-fcntl.obj libicrt_a-fd-hook.obj libicrt_a-free.obj libicrt_a-fstat.obj libicrt_a-getdtablesize.obj libicrt_a-getprogname.obj malloc/libicrt_a-scratch_buffer_grow.obj malloc/libicrt_a-scratch_buffer_grow_preserve.obj malloc/libicrt_a-scratch_buffer_set_array_size.obj libicrt_a-malloca.obj libicrt_a-mempcpy.obj libicrt_a-msvc-inval.obj libicrt_a-msvc-nothrow.obj libicrt_a-open.obj libicrt_a-progname.obj libicrt_a-raise.obj libicrt_a-rawmemchr.obj libicrt_a-read.obj libicrt_a-readlink.obj libicrt_a-realloc.obj libicrt_a-progreloc.obj libicrt_a-safe-read.obj libicrt_a-sigprocmask.obj libicrt_a-stat.obj libicrt_a-stat-time.obj  libicrt_a-stdio-write.obj libicrt_a-stdlib.obj libicrt_a-strerror.obj libicrt_a-strerror-override.obj libicrt_a-unistd.obj uniwidth/libicrt_a-width.obj libicrt_a-xmalloc.obj libicrt_a-xstrdup.obj libicrt_a-xreadlink.obj relocatable.obj stat-w32.obj
+: libicrt.a
+make[2]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/srclib'
+make[1]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/srclib'
+cd src && /usr/bin/make all
+make[1]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/src'
+Makefile:81: update target 'iconv_no_i18n.obj' due to: target does not exist
+compile cl.exe -c -I. -I.././../src/v1.18-8006e03beb.clean/src -I.. -I../include -I.././../src/v1.18-8006e03beb.clean/src/../include -I../srclib -I.././../src/v1.18-8006e03beb.clean/src/../srclib -I../lib -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -DWIN32 -D_WINDOWS -DINSTALLDIR=\"/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/debug/../tools/libiconv/debug/bin\" -DLOCALEDIR=\"/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/debug/share/libiconv/locale\" .././../src/v1.18-8006e03beb.clean/src/iconv_no_i18n.c
+Makefile:87: update target 'iconv.res' due to: target does not exist
+windres-rc rc.exe `/bin/sh .././../src/v1.18-8006e03beb.clean/src/../windows/windres-options --escape 1.18` -i .././../src/v1.18-8006e03beb.clean/src/../windows/iconv.rc -o iconv.res --output-format=coff
+Makefile:84: update target 'iconv.obj' due to: target does not exist
+compile cl.exe -c -I. -I.././../src/v1.18-8006e03beb.clean/src -I.. -I../include -I.././../src/v1.18-8006e03beb.clean/src/../include -I../srclib -I.././../src/v1.18-8006e03beb.clean/src/../srclib -I../lib -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 -DWIN32 -D_WINDOWS -DINSTALLDIR=\"/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/debug/../tools/libiconv/debug/bin\" -DLOCALEDIR=\"/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/debug/share/libiconv/locale\" .././../src/v1.18-8006e03beb.clean/src/iconv.c
+iconv_no_i18n.c
+iconv.c
+INPUT:.././../src/v1.18-8006e03beb.clean/src/../windows/iconv.rc
+OUTPUT:iconv.res
+rc.exe -DPACKAGE_VERSION_STRING="1.18" -DPACKAGE_VERSION_MAJOR=1 -DPACKAGE_VERSION_MINOR=18 -DPACKAGE_VERSION_SUBMINOR=0 -fo iconv.res .././../src/v1.18-8006e03beb.clean/src/../windows/iconv.rc
+Microsoft (R) Windows (R) Resource Compiler Version 10.0.10011.16384
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+Makefile:78: update target 'iconv_no_i18n.exe' due to: target does not exist
+/bin/sh ../libtool --mode=link compile cl.exe -Xlinker -Xlinker -Xlinker -LIBPATH:D:/ReposGitHub/nLARN/vcpkg_installed/x64-windows/debug/lib -Xlinker -Xlinker -Xlinker -machine:x64 -Xlinker -Xlinker -Xlinker -nologo -Xlinker -Xlinker -Xlinker -debug -Xlinker -Xlinker -Xlinker -INCREMENTAL -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MDd -Xcompiler -Z7 -Xcompiler -Ob0 -Xcompiler -Od -Xcompiler -RTC1 iconv_no_i18n.obj ../srclib/libicrt.a ../lib/libiconv.la iconv.res -o iconv_no_i18n.exe
+libtool: link: compile cl.exe -Xlinker -LIBPATH:D:/ReposGitHub/nLARN/vcpkg_installed/x64-windows/debug/lib -Xlinker -machine:x64 -Xlinker -nologo -Xlinker -debug -Xlinker -INCREMENTAL -nologo -utf-8 -MP -MDd -Z7 -Ob0 -Od -RTC1 iconv_no_i18n.obj ../srclib/libicrt.a iconv.res -o .libs/iconv_no_i18n.exe  ../lib/.libs/iconv.lib  
+cl : Command line warning D9024 : unrecognized source file type '../srclib/libicrt.a', object file assumed
+cl : Command line warning D9024 : unrecognized source file type '../srclib/libicrt.a', object file assumed
+cl : Command line warning D9024 : unrecognized source file type '../srclib/libicrt.a', object file assumed
+cl : Command line warning D9024 : unrecognized source file type '../srclib/libicrt.a', object file assumed
+libtool: link: lt_outputfile=".libs/iconv_no_i18n.exe"
+libtool: link:  lt_tool_outputfile=".libs\iconv_no_i18n.exe"
+libtool: link:  case .libs/iconv_no_i18n.exe in *.exe|*.EXE) ;; *) lt_outputfile=.libs/iconv_no_i18n.exe.exe lt_tool_outputfile=.libs\iconv_no_i18n.exe.exe ;; esac
+libtool: link:  if test : != "mt" && test -f ".libs/iconv_no_i18n.exe.manifest"; then mt -manifest ".libs\iconv_no_i18n.exe.manifest" -outputresource:".libs\iconv_no_i18n.exe" || exit 1; rm -f ".libs/iconv_no_i18n.exe.manifest"; fi
+lt-iconv_no_i18n.c
+Makefile:74: update target 'all' due to: target does not exist
+test `ls -ld . | sed -e 's/^d\(.........\).*/\1/'` = rwxrwxrwx || chmod 777 .
+make[1]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/src'
+cd po && /usr/bin/make all
+make[1]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/po'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/po'
+cd man && /usr/bin/make all
+make[1]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/man'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/man'
+if test -d tests; then cd tests && /usr/bin/make all; fi
+make[1]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/tests'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-dbg/tests'

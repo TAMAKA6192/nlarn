@@ -1,0 +1,43 @@
+Downloading https://github.com/PCRE2Project/pcre2/archive/pcre2-10.47.tar.gz -> PCRE2Project-pcre2-pcre2-10.47.tar.gz
+Successfully downloaded PCRE2Project-pcre2-pcre2-10.47.tar.gz
+-- Extracting source C:/Users/Owner/AppData/Local/vcpkg/downloads/PCRE2Project-pcre2-pcre2-10.47.tar.gz
+-- Applying patch pcre2-10.35_fix-uwp.patch
+-- Applying patch no-static-suffix.patch
+-- Using source at D:/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/pcre2/src/cre2-10.47-7b8426e64a.clean
+Downloading https://github.com/zherczeg/sljit/archive/45f910b78c6605ebf5b53d3ec7cb00f2312fe417.tar.gz -> zherczeg-sljit-45f910b78c6605ebf5b53d3ec7cb00f2312fe417.tar.gz
+Successfully downloaded zherczeg-sljit-45f910b78c6605ebf5b53d3ec7cb00f2312fe417.tar.gz
+-- Extracting source C:/Users/Owner/AppData/Local/vcpkg/downloads/zherczeg-sljit-45f910b78c6605ebf5b53d3ec7cb00f2312fe417.tar.gz
+-- Using source at D:/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/pcre2/src/f2312fe417-2bbc527107.clean
+-- Found external ninja('1.12.1').
+-- Configuring x64-windows
+CMake Warning at D:/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/vcpkg-cmake/vcpkg_cmake_configure.cmake:344 (message):
+  The following variables are not used in CMakeLists.txt:
+
+      PCRE2_STATIC_RUNTIME
+
+  Please recheck them and remove the unnecessary options from the
+  `vcpkg_cmake_configure` call.
+
+  If these options should still be passed for whatever reason, please use the
+  `MAYBE_UNUSED_VARIABLES` argument.
+Call Stack (most recent call first):
+  C:/Users/Owner/AppData/Local/vcpkg/registries/git-trees/753cc6dbffbcde00b0c10b8d594108beb320a183/portfile.cmake:34 (vcpkg_cmake_configure)
+  scripts/ports.cmake:206 (include)
+
+
+-- Building x64-windows-dbg
+-- Building x64-windows-rel
+-- Fixing pkgconfig file: D:/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/pcre2_x64-windows/lib/pkgconfig/libpcre2-16.pc
+-- Fixing pkgconfig file: D:/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/pcre2_x64-windows/lib/pkgconfig/libpcre2-32.pc
+-- Fixing pkgconfig file: D:/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/pcre2_x64-windows/lib/pkgconfig/libpcre2-8.pc
+-- Fixing pkgconfig file: D:/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/pcre2_x64-windows/lib/pkgconfig/libpcre2-posix.pc
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.4.3-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.2-2-x86_64.pkg.tar.zst
+-- Using msys root at C:/Users/Owner/AppData/Local/vcpkg/downloads/tools/msys2/9272adbcaf19caef
+-- Fixing pkgconfig file: D:/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/pcre2_x64-windows/debug/lib/pkgconfig/libpcre2-16.pc
+-- Fixing pkgconfig file: D:/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/pcre2_x64-windows/debug/lib/pkgconfig/libpcre2-32.pc
+-- Fixing pkgconfig file: D:/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/pcre2_x64-windows/debug/lib/pkgconfig/libpcre2-8.pc
+-- Fixing pkgconfig file: D:/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/pcre2_x64-windows/debug/lib/pkgconfig/libpcre2-posix.pc
+-- Installing: D:/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/pcre2_x64-windows/share/pcre2/usage
+-- Installing: D:/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/pcre2_x64-windows/share/pcre2/copyright
+-- ビルド後の検証の実行

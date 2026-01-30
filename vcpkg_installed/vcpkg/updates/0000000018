@@ -1,0 +1,7 @@
+Package: vcpkg-make
+Version: 2026-01-01
+Depends: vcpkg-cmake-get-vars
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 7b50b3ee8550ac8eb944dba1c1eea9ea956b24cd604aefe0e6eabc165ac05035
+Status: install ok half-installed

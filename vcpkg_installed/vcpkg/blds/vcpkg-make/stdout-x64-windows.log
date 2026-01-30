@@ -1,0 +1,9 @@
+Downloading automake-1.17.tar.gz, trying https://ftpmirror.gnu.org/gnu/automake/automake-1.17.tar.gz
+Successfully downloaded automake-1.17.tar.gz
+-- Extracting source C:/Users/Owner/AppData/Local/vcpkg/downloads/automake-1.17.tar.gz
+-- Using source at D:/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/vcpkg-make/src/automake-1-c362683103.clean
+-- Found external ninja('1.12.1').
+-- Getting CMake variables for x64-windows
+-- Loading CMake variables from D:/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/vcpkg-make/cmake-get-vars_C_CXX-x64-windows.cmake.log
+-- x64-windows autotools triplet: x86_64-pc-mingw32 (from vcpkg)
+-- ビルド後の検証の実行

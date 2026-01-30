@@ -1,0 +1,160 @@
+Makefile:51: update target 'install' due to: target does not exist
+cd libcharset && /usr/bin/make install prefix='/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows' exec_prefix='/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows' libdir='/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib'
+make[1]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel/libcharset'
+Makefile:34: update target 'all' due to: target does not exist
+cd lib && /usr/bin/make all
+make[2]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel/libcharset/lib'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel/libcharset/lib'
+Makefile:46: update target 'install' due to: target does not exist
+cd lib && /usr/bin/make install prefix='/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows' exec_prefix='/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows' libdir='/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib'
+make[2]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel/libcharset/lib'
+Makefile:77: update target 'install' due to: target does not exist
+/bin/sh ../.././../src/v1.18-8006e03beb.clean/libcharset/build-aux/mkinstalldirs /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib ; \
+/bin/sh ../libtool --mode=install /usr/bin/install -c libcharset.la /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib/libcharset.la
+mkdir -p -- /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib
+libtool: install: /usr/bin/install -c .libs/charset.lib /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib/charset.lib
+libtool: install: base_file=`basename libcharset.la`
+libtool: install:  dlpath=`/bin/sh 2>&1 -c '. .libs/'libcharset.la'i; echo charset-1.dll'`
+libtool: install:  dldir=/D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib/`dirname ../bin/charset-1.dll`
+libtool: install:  test -d /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib/../bin || mkdir -p /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib/../bin
+libtool: install:  /usr/bin/install -c .libs/charset-1.dll /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib/../bin/charset-1.dll
+libtool: install: /usr/bin/install -c .libs/libcharset.lai /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib/libcharset.la
+make[2]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel/libcharset/lib'
+/bin/sh .././../src/v1.18-8006e03beb.clean/libcharset/build-aux/mkinstalldirs /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/include
+/usr/bin/install -c -m 644 include/libcharset.h.inst /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/include/libcharset.h
+/usr/bin/install -c -m 644 include/localcharset.h.inst /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/include/localcharset.h
+make[1]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel/libcharset'
+cd lib && /usr/bin/make install prefix='/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows' exec_prefix='/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows' libdir='/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib'
+make[1]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel/lib'
+Makefile:104: update target 'install' due to: target does not exist
+if [ ! -d /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib ] ; then /bin/sh .././../src/v1.18-8006e03beb.clean/build-aux/mkinstalldirs /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib ; fi
+/bin/sh ../libtool --mode=install /usr/bin/install -c libiconv.la /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib/libiconv.la
+libtool: install: /usr/bin/install -c .libs/iconv.lib /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib/iconv.lib
+libtool: install: base_file=`basename libiconv.la`
+libtool: install:  dlpath=`/bin/sh 2>&1 -c '. .libs/'libiconv.la'i; echo iconv-2.dll'`
+libtool: install:  dldir=/D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib/`dirname ../bin/iconv-2.dll`
+libtool: install:  test -d /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib/../bin || mkdir -p /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib/../bin
+libtool: install:  /usr/bin/install -c .libs/iconv-2.dll /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib/../bin/iconv-2.dll
+libtool: install: /usr/bin/install -c .libs/libiconv.lai /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib/libiconv.la
+case "mingw32" in \
+  aix*) (cd /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib && \
+         objects=`ar-lib lib.exe t libiconv.a`" "`ar-lib lib.exe t /lib/libiconv.a` && \
+         ar-lib lib.exe x libiconv.a && ar-lib lib.exe x /lib/libiconv.a && \
+         ar-lib lib.exe q libiconv.new.a $objects && \
+         rm -f $objects && \
+         mv -f libiconv.new.a libiconv.a) ;; \
+esac
+make[1]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel/lib'
+cd srclib && /usr/bin/make install prefix='/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows' exec_prefix='/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows' libdir='/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib'
+make[1]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel/srclib'
+cd .. && /usr/bin/make  am--refresh
+make[2]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel'
+make[2]: Nothing to be done for 'am--refresh'.
+make[2]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel'
+cd .. && /usr/bin/make  am--refresh
+make[2]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel'
+make[2]: Nothing to be done for 'am--refresh'.
+make[2]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel'
+make[2]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel'
+make[2]: Nothing to be done for 'am--refresh'.
+make[2]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel'
+Makefile:2057: update target 'install' due to: target is .PHONY
+/usr/bin/make  install-am
+make[2]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel/srclib'
+cd .. && /usr/bin/make  am--refresh
+make[3]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel'
+make[3]: Nothing to be done for 'am--refresh'.
+make[3]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel'
+cd .. && /usr/bin/make  am--refresh
+make[3]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel'
+make[3]: Nothing to be done for 'am--refresh'.
+make[3]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel'
+make[3]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel'
+make[3]: Nothing to be done for 'am--refresh'.
+make[3]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel'
+Makefile:2064: update target 'install-am' due to: target is .PHONY
+/usr/bin/make  install-exec-am install-data-am
+make[3]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel/srclib'
+cd .. && /usr/bin/make  am--refresh
+make[4]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel'
+make[4]: Nothing to be done for 'am--refresh'.
+make[4]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel'
+cd .. && /usr/bin/make  am--refresh
+make[4]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel'
+make[4]: Nothing to be done for 'am--refresh'.
+make[4]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel'
+make[4]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel'
+make[4]: Nothing to be done for 'am--refresh'.
+make[4]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel/srclib'
+make[2]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel/srclib'
+make[1]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel/srclib'
+cd src && /usr/bin/make install prefix='/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows' exec_prefix='/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows' libdir='/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib'
+make[1]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel/src'
+Makefile:74: update target 'all' due to: target does not exist
+test `ls -ld . | sed -e 's/^d\(.........\).*/\1/'` = rwxrwxrwx || chmod 777 .
+Makefile:113: update target 'install' due to: target does not exist
+if [ ! -d /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/tools/libiconv/bin ] ; then /bin/sh .././../src/v1.18-8006e03beb.clean/build-aux/mkinstalldirs /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/tools/libiconv/bin ; fi
+mkdir -p -- /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/tools/libiconv/bin
+case "mingw32" in \
+  hpux*) compile cl.exe -Xlinker -Xlinker -Xlinker -LIBPATH:D:/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib -Xlinker -Xlinker -Xlinker -machine:x64 -Xlinker -Xlinker -Xlinker -nologo -Xlinker -Xlinker -Xlinker -DEBUG -Xlinker -Xlinker -Xlinker -INCREMENTAL:NO -Xlinker -Xlinker -Xlinker -OPT:REF -Xlinker -Xlinker -Xlinker -OPT:ICF -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MD -Xcompiler -O2 -Xcompiler -Oi -Xcompiler -Gy -Xcompiler -Z7 `if test -n ':'; then : /D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/tools/libiconv/bin; fi` iconv.obj ../srclib/libicrt.a -L/D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib -liconv  iconv.res `if test -n '/D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows'; then echo " -Wl,+b -Wl,/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib"; fi` -o iconv.exe;; \
+  *) /bin/sh ../libtool --mode=link compile cl.exe -Xlinker -Xlinker -Xlinker -LIBPATH:D:/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib -Xlinker -Xlinker -Xlinker -machine:x64 -Xlinker -Xlinker -Xlinker -nologo -Xlinker -Xlinker -Xlinker -DEBUG -Xlinker -Xlinker -Xlinker -INCREMENTAL:NO -Xlinker -Xlinker -Xlinker -OPT:REF -Xlinker -Xlinker -Xlinker -OPT:ICF -Xcompiler -nologo -Xcompiler -utf-8 -Xcompiler -MP -Xcompiler -MD -Xcompiler -O2 -Xcompiler -Oi -Xcompiler -Gy -Xcompiler -Z7 `if test -n ':'; then : /D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/tools/libiconv/bin; fi` iconv.obj ../srclib/libicrt.a  /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib/libiconv.la iconv.res -o iconv.exe;; \
+esac
+libtool: link: compile cl.exe -Xlinker -LIBPATH:D:/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib -Xlinker -machine:x64 -Xlinker -nologo -Xlinker -DEBUG -Xlinker -INCREMENTAL:NO -Xlinker -OPT:REF -Xlinker -OPT:ICF -nologo -utf-8 -MP -MD -O2 -Oi -Gy -Z7 iconv.obj ../srclib/libicrt.a iconv.res -o .libs/iconv.exe  /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/lib/iconv.lib  
+cl : Command line warning D9024 : unrecognized source file type '../srclib/libicrt.a', object file assumed
+cl : Command line warning D9024 : unrecognized source file type '../srclib/libicrt.a', object file assumed
+cl : Command line warning D9024 : unrecognized source file type '../srclib/libicrt.a', object file assumed
+cl : Command line warning D9024 : unrecognized source file type '../srclib/libicrt.a', object file assumed
+libtool: link: lt_outputfile=".libs/iconv.exe"
+libtool: link:  lt_tool_outputfile=".libs\iconv.exe"
+libtool: link:  case .libs/iconv.exe in *.exe|*.EXE) ;; *) lt_outputfile=.libs/iconv.exe.exe lt_tool_outputfile=.libs\iconv.exe.exe ;; esac
+libtool: link:  if test : != "mt" && test -f ".libs/iconv.exe.manifest"; then mt -manifest ".libs\iconv.exe.manifest" -outputresource:".libs\iconv.exe" || exit 1; rm -f ".libs/iconv.exe.manifest"; fi
+lt-iconv.c
+/bin/sh ../libtool --mode=install /usr/bin/install -c iconv.exe /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/tools/libiconv/bin/iconv.exe
+libtool: install: /usr/bin/install -c .libs/iconv.exe /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/tools/libiconv/bin/iconv.exe
+make[1]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel/src'
+if [ ! -d /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/include ] ; then /bin/sh ./../src/v1.18-8006e03beb.clean/build-aux/mkinstalldirs /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/include ; fi
+/usr/bin/install -c -m 644 include/iconv.h.inst /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/include/iconv.h
+cd po && /usr/bin/make install prefix='/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows' exec_prefix='/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows' datarootdir='/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv' datadir='/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv'
+make[1]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel/po'
+Makefile:356: update target 'install-data' due to: target does not exist
+if test "libiconv" = "gettext-tools"; then \
+  /usr/bin/mkdir -p /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sed quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sed Rules-quot   Makevars.template; do \
+    /usr/bin/install -c -m 644 .././../src/v1.18-8006e03beb.clean/po/$file \
+		    /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+make[1]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel/po'
+cd man && /usr/bin/make install prefix='/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows' exec_prefix='/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows' datarootdir='/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv' datadir='/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv' mandir='/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv'
+make[1]: Entering directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel/man'
+Makefile:38: update target 'install' due to: target does not exist
+if [ ! -d /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv/man1 ] ; then /bin/sh .././../src/v1.18-8006e03beb.clean/build-aux/mkinstalldirs /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv/man1 ; fi
+mkdir -p -- /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv/man1
+builddir="`pwd`"; cd .././../src/v1.18-8006e03beb.clean/man && for f in *.1 ; do (cd "$builddir"; echo /usr/bin/install -c -m 644 .././../src/v1.18-8006e03beb.clean/man/$f /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv/man1/$f ; /usr/bin/install -c -m 644 .././../src/v1.18-8006e03beb.clean/man/$f /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv/man1/$f) ; done
+/usr/bin/install -c -m 644 .././../src/v1.18-8006e03beb.clean/man/iconv.1 /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv/man1/iconv.1
+if [ ! -d /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv/man3 ] ; then /bin/sh .././../src/v1.18-8006e03beb.clean/build-aux/mkinstalldirs /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv/man3 ; fi
+mkdir -p -- /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv/man3
+builddir="`pwd`"; cd .././../src/v1.18-8006e03beb.clean/man && for f in *.3 ; do (cd "$builddir"; echo /usr/bin/install -c -m 644 .././../src/v1.18-8006e03beb.clean/man/$f /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv/man3/$f ; /usr/bin/install -c -m 644 .././../src/v1.18-8006e03beb.clean/man/$f /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv/man3/$f) ; done
+/usr/bin/install -c -m 644 .././../src/v1.18-8006e03beb.clean/man/iconv.3 /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv/man3/iconv.3
+/usr/bin/install -c -m 644 .././../src/v1.18-8006e03beb.clean/man/iconv_close.3 /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv/man3/iconv_close.3
+/usr/bin/install -c -m 644 .././../src/v1.18-8006e03beb.clean/man/iconv_open.3 /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv/man3/iconv_open.3
+/usr/bin/install -c -m 644 .././../src/v1.18-8006e03beb.clean/man/iconv_open_into.3 /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv/man3/iconv_open_into.3
+/usr/bin/install -c -m 644 .././../src/v1.18-8006e03beb.clean/man/iconvctl.3 /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv/man3/iconvctl.3
+if [ ! -d /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv ] ; then /bin/sh .././../src/v1.18-8006e03beb.clean/build-aux/mkinstalldirs /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv ; fi
+builddir="`pwd`"; cd .././../src/v1.18-8006e03beb.clean/man && for f in *.html ; do (cd "$builddir"; echo /usr/bin/install -c -m 644 .././../src/v1.18-8006e03beb.clean/man/$f /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv/$f ; /usr/bin/install -c -m 644 .././../src/v1.18-8006e03beb.clean/man/$f /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv/$f) ; done
+/usr/bin/install -c -m 644 .././../src/v1.18-8006e03beb.clean/man/iconv.1.html /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv/iconv.1.html
+/usr/bin/install -c -m 644 .././../src/v1.18-8006e03beb.clean/man/iconv.3.html /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv/iconv.3.html
+/usr/bin/install -c -m 644 .././../src/v1.18-8006e03beb.clean/man/iconv_close.3.html /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv/iconv_close.3.html
+/usr/bin/install -c -m 644 .././../src/v1.18-8006e03beb.clean/man/iconv_open.3.html /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv/iconv_open.3.html
+/usr/bin/install -c -m 644 .././../src/v1.18-8006e03beb.clean/man/iconv_open_into.3.html /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv/iconv_open_into.3.html
+/usr/bin/install -c -m 644 .././../src/v1.18-8006e03beb.clean/man/iconvctl.3.html /D/ReposGitHub/nLARN/vcpkg_installed/vcpkg/pkgs/libiconv_x64-windows/D/ReposGitHub/nLARN/vcpkg_installed/x64-windows/share/libiconv/iconvctl.3.html
+make[1]: Leaving directory '/d/ReposGitHub/nLARN/vcpkg_installed/vcpkg/blds/libiconv/x64-windows-rel/man'
