@@ -1,0 +1,30 @@
+{
+  "ItemGroup": {
+    "None": ""
+  },
+  "PropertyGroup": {
+    "ConfigurationType": "Application",
+    "PlatformToolset": "v145",
+    "CharacterSet": "Unicode",
+    "UseDebugLibraries": "false",
+    "WholeProgramOptimization": "true"
+  },
+  "Import": "",
+  "ItemDefinitionGroup": {
+    "ClCompile": {
+      "WarningLevel": "Level3",
+      "Optimization": "MaxSpeed",
+      "FunctionLevelLinking": "true",
+      "IntrinsicFunctions": "true",
+      "AdditionalIncludeDirectories": "inc;inc/external;PDCurses;%(AdditionalIncludeDirectories)",
+      "PreprocessorDefinitions": "G_DISABLE_ASSERT;G_DISABLE_DEPRECATED;SDLPDCURSES;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)",
+      "LanguageStandard": "stdcpp17",
+      "TreatWarningAsError": "true"
+    },
+    "Link": {
+      "EnableCOMDATFolding": "true",
+      "OptimizeReferences": "true",
+      "AdditionalDependencies": "zlib.lib;%(AdditionalDependencies)"
+    }
+  }
+}
